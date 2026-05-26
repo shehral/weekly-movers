@@ -156,7 +156,8 @@ yesterday's, and writes one markdown file.
 | Layer | Choice | Why |
 |---|---|---|
 | Language | Python 3.12 | Standard for yfinance + pandas |
-| Data source | yfinance (latest) | Free, no API key, covers NYSE+NASDAQ listed |
+| Data source (screen) | Polygon Grouped Daily Bars (free tier) | One API call returns OHLC for all US stocks per day; 5 calls/min limit, 30-day fetch ≈ 6 min |
+| Data source (charts) | yfinance | Used for 252-day history of ~500 screened tickers in Phase 2 (well under yfinance's 1,300-ticker rate-limit wall) |
 | Universe source | NASDAQ Trader symbol directory | Canonical, free, two text files |
 | Trading-day check | `pandas_market_calendars` | NYSE calendar baked in |
 | OHLC cache format | Parquet (via `pyarrow`) | Columnar, compressed, safe deserialization (vs pickle) |
@@ -277,30 +278,38 @@ Files to create:
   filters out ETFs, test issues, non-normal financial-status rows, and
   symbols with special characters (`=`, `.`, `$`). Writes
   `data/universe.csv` with columns `symbol, name, exchange`.
-- `scripts/fetch_prices.py` — reads universe, calls `yf.download(...)`
-  in **80-ticker chunks with a 2-second sleep between chunks** and
-  `period='1y', interval='1d', group_by='ticker', threads=True,
-  auto_adjust=True`. Sets `yf.config.network.retries = 3`. **Passes a
-  shared `curl_cffi.requests.Session(impersonate="chrome")`** session
-  for browser TLS fingerprinting (community 2025-2026 consensus per
-  yfinance issues #2422, #2614). Pivots the resulting DataFrame into
-  a long-format frame (`ticker, date, open, high, low, close, volume`)
-  and writes `data/cache/<DATE>.parquet` via `tmp + os.replace`
-  (atomic). Logs tickers with empty/short results.
+- `scripts/_polygon.py` (NEW) — Polygon.io Grouped Daily Bars adapter.
+  Single endpoint returns OHLC for *every* US stock for a given date.
+  Free-tier limit: 5 calls/min — sleeps 12.5s between calls. Retries
+  via tenacity on 429 / connection errors.
 
-  **Single `period='1y'` pass** (not the original two-pass 15d + 1y
-  plan) serves both the screen computation (slice trailing 5 sessions
-  in pandas) and chart data (slice last 252 sessions). Bandwidth cost
-  is dominated by request setup, not payload size.
+- `scripts/fetch_prices.py` — fetches **35 trailing trading days** of
+  OHLC for the universe via Polygon Grouped Daily Bars (35 calls,
+  ~7 min runtime under free-tier rate limit). Intersects Polygon's
+  US-wide coverage with our common-stock universe to get
+  ~6,500 in-scope tickers. Writes `data/cache/<DATE>.parquet` via
+  `tmp + os.replace` (atomic).
 
-  Long-format parquet rationale: easier to filter and resume from than
-  yfinance's native wide multi-index columns; small (~10MB compressed
-  for 8000 tickers × 252 days); plays well with `pd.read_parquet(...,
-  filters=[('ticker', '==', 'NVDA')])`.
+  35 days covers both screen needs: trailing 5 sessions for variation
+  metrics + 30-day average dollar volume + buffer for any holiday gaps.
+
+  **Architecture rationale:** Original plan used yfinance batch
+  download. Real-load test on 2026-05-25 showed yfinance rate-limited
+  hard — 79% of tickers failed after ~1,300 successful requests due to
+  Yahoo's per-IP limiter. `curl_cffi` chrome impersonation did NOT
+  bypass it; the limiter is request-rate based, not fingerprint based.
+  Polygon's batch-by-date endpoint sidesteps this entirely: one
+  request returns the entire US market for a day. yfinance is still
+  used in Phase 2 (chart history for ~500 screened tickers, well
+  under the 1,300 rate-limit wall). See resolved todo 006.
 
   Parquet content hash (SHA256 of bytes) is written into the run CSV
   header by `compute_screens.py` so `generate_site.py` can refuse to
   render if cache and run CSV diverge (same-day rerun safety).
+
+  Requires `POLYGON_API_KEY` env var. In dev: source
+  `~/.weekly-movers-env` (mode 600, outside repo). In CI: GitHub
+  Actions secret `POLYGON_API_KEY`.
 
 - `scripts/compute_screens.py` — loads the parquet, applies price-band +
   volume filters, computes the three variation metrics, writes
@@ -567,6 +576,8 @@ Files to create:
     refresh:
       runs-on: ubuntu-latest
       timeout-minutes: 30
+      env:
+        POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
       steps:
         - uses: actions/checkout@v4
           with:
@@ -1011,7 +1022,8 @@ in today's screen first, or accept 404 risk.
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| **yfinance Yahoo API breaks** | Medium (it's unofficial) | High (whole screen down) | `yf.config.network.retries=3`; fall back to `curl_cffi` session if TLS fingerprinting becomes the issue; long-term backup plan: switch to Financial Modeling Prep free tier |
+| **Polygon API outage / quota** | Low (paid-quality infra on free tier) | High (whole screen down) | Polygon free tier is reliable; if exceeded, upgrade to $29/mo Starter (100 calls/min); cold backup: Tiingo $10/mo or FMP Starter $14/mo |
+| **yfinance fails on chart-history pulls (Phase 2)** | Low (only ~500 tickers, well under 1,300 rate-limit wall) | Low (charts degrade, screen still works) | Cache historical OHLC across runs; only fetch missing days; if persistent, fall back to Polygon for chart history too |
 | **GH Actions cron drift >2hr** | Low | Medium (refresh after market open) | 11:30 UTC has ~4hr buffer to 9:30am ET; off-the-hour cron reduces drift further; even worst-case still pre-market |
 | **Universe file format changes** | Very low | Medium | NASDAQ Trader format is stable since ~2005; parser is one screenful of code |
 | **Lightweight Charts v6 breaking change** | Medium | Low | Pin to `v5.2.0` in committed asset; upgrade deliberately |

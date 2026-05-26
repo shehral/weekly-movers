@@ -1,7 +1,13 @@
-"""Batch-download trailing 1y OHLC for the full universe via yfinance.
+"""Fetch trailing-N-day OHLC for the universe via Polygon.io.
 
-Applies todos/003 idioms: tenacity retries, curl_cffi session, atomic
-parquet write. Single 1y pass serves both screen logic and chart data.
+Uses Grouped Daily Bars endpoint: one API call per trading day returns
+OHLC for every US stock. Free-tier safe (5 calls/min, sleep 12.5s
+between).
+
+Output schema unchanged from prior yfinance version: parquet of
+(ticker, date, open, high, low, close, volume) rows, written atomically.
+A SHA256 of the parquet bytes is exposed so compute_screens.py can
+record it in the run-CSV header for staleness detection.
 """
 from __future__ import annotations
 
@@ -9,107 +15,36 @@ import argparse
 import hashlib
 import io
 import sys
-import time
+from datetime import date
+from pathlib import Path
 
-import curl_cffi.requests as cc
 import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
-import yfinance as yf
-from tenacity import (
-    RetryError,
-    retry,
-    retry_if_exception_type,
-    stop_after_attempt,
-    wait_exponential,
-)
 
 from _common import (
     CACHE,
+    NYSE,
     UNIVERSE_CSV,
     atomic_write_bytes,
     get_logger,
     today_et,
 )
+from _polygon import fetch_many_days
 
-CHUNK_SIZE = 80
-SLEEP_BETWEEN_CHUNKS_S = 2.0
+DEFAULT_DAYS = 35  # 5 sessions for variation + 30 sessions avg vol + buffer
 
 log = get_logger("fetch_prices")
 
 
-def pivot_to_long(df: pd.DataFrame) -> pd.DataFrame:
-    """yfinance returns wide multi-index columns (ticker, field) × date rows.
-    Pivot to long format: one row per (ticker, date) with lowercase field cols.
-    """
-    if df.empty:
-        return pd.DataFrame(columns=["ticker", "date", "open", "high", "low", "close", "volume"])
-    # When yf.download is called with multiple tickers and group_by='ticker',
-    # the columns are a MultiIndex of (ticker, field).
-    if isinstance(df.columns, pd.MultiIndex):
-        df = df.stack(level=0, future_stack=True)
-        df.index.set_names(["date", "ticker"], inplace=True)
-        df = df.reset_index()
-    else:
-        # Single ticker case (rare in batch mode but defensive)
-        df = df.reset_index().rename(columns={"index": "date"})
-        df["ticker"] = "UNKNOWN"
-    df.columns = [c.lower() if isinstance(c, str) else c for c in df.columns]
-    keep = ["ticker", "date", "open", "high", "low", "close", "volume"]
-    df = df[[c for c in keep if c in df.columns]]
-    df = df.dropna(subset=["close", "volume"])
-    return df
+def last_n_trading_days(n: int, asof: date | None = None) -> list[date]:
+    asof = asof or today_et()
+    schedule = NYSE.valid_days(start_date=asof - pd.Timedelta(days=n * 2), end_date=asof)
+    days = [d.date() for d in schedule[-n:]]
+    return days
 
 
-@retry(
-    stop=stop_after_attempt(3),
-    wait=wait_exponential(multiplier=2, min=2, max=30),
-    retry=retry_if_exception_type(Exception),
-    reraise=True,
-)
-def _download_chunk(tickers: list[str], session: cc.Session) -> pd.DataFrame:
-    log.info("Downloading chunk of %d tickers", len(tickers))
-    return yf.download(
-        tickers,
-        period="1y",
-        interval="1d",
-        group_by="ticker",
-        threads=True,
-        auto_adjust=True,
-        session=session,
-        progress=False,
-    )
-
-
-def download_universe(universe: list[str]) -> tuple[pd.DataFrame, list[str]]:
-    session = cc.Session(impersonate="chrome")
-    chunks = [universe[i : i + CHUNK_SIZE] for i in range(0, len(universe), CHUNK_SIZE)]
-    frames: list[pd.DataFrame] = []
-    failed: list[str] = []
-
-    for i, chunk in enumerate(chunks):
-        try:
-            raw = _download_chunk(chunk, session)
-            frames.append(pivot_to_long(raw))
-        except (RetryError, Exception) as e:  # noqa: BLE001 — log and continue
-            log.warning("Chunk %d failed after retries: %s", i, e)
-            failed.extend(chunk)
-        if i < len(chunks) - 1:
-            time.sleep(SLEEP_BETWEEN_CHUNKS_S)
-
-    if not frames:
-        return pd.DataFrame(), failed
-
-    df = pd.concat(frames, ignore_index=True)
-    # Filter to tickers that actually produced data (yfinance silently
-    # returns NaN columns for delisted/bad tickers).
-    df = df.dropna(subset=["close"])
-    found = set(df["ticker"].unique())
-    failed.extend([t for t in universe if t not in found and t not in failed])
-    return df, failed
-
-
-def write_parquet_atomic(df: pd.DataFrame, path) -> str:
+def write_parquet_atomic(df: pd.DataFrame, path: Path) -> str:
     path.parent.mkdir(parents=True, exist_ok=True)
     buf = io.BytesIO()
     table = pa.Table.from_pandas(df, preserve_index=False)
@@ -122,31 +57,47 @@ def write_parquet_atomic(df: pd.DataFrame, path) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int, default=None, help="Cap universe size (for testing)")
+    parser.add_argument("--days", type=int, default=DEFAULT_DAYS,
+                        help=f"Trading days of history to fetch (default {DEFAULT_DAYS})")
+    parser.add_argument("--asof", type=str, default=None,
+                        help="ISO date to use as 'today' (default: today_et)")
+    parser.add_argument("--limit-universe", type=int, default=None,
+                        help="Cap universe size after intersect (for testing)")
     args = parser.parse_args()
 
     if not UNIVERSE_CSV.exists():
-        log.error("Universe file missing: %s. Run fetch_universe.py first.", UNIVERSE_CSV)
+        log.error("Universe missing: %s. Run fetch_universe.py first.", UNIVERSE_CSV)
         return 2
 
-    universe_df = pd.read_csv(UNIVERSE_CSV)
-    tickers = universe_df["symbol"].tolist()
-    if args.limit:
-        tickers = tickers[: args.limit]
+    asof = today_et() if args.asof is None else date.fromisoformat(args.asof)
+    universe = pd.read_csv(UNIVERSE_CSV)
+    universe_set = set(universe["symbol"].str.upper())
+    log.info("Universe: %d tickers", len(universe_set))
 
-    log.info("Fetching prices for %d tickers", len(tickers))
-    df, failed = download_universe(tickers)
+    days = last_n_trading_days(args.days, asof=asof)
+    log.info("Fetching %d trading days: %s … %s", len(days), days[0], days[-1])
 
-    if df.empty:
-        log.error("No data fetched. Failed: %d", len(failed))
+    raw = fetch_many_days(days)
+    if raw.empty:
+        log.error("Polygon returned no data across %d days", len(days))
         return 3
 
-    out = CACHE / f"{today_et().isoformat()}.parquet"
+    log.info("Polygon returned %d rows across %d tickers (universe: %d)",
+             len(raw), raw["ticker"].nunique(), len(universe_set))
+
+    # Intersect Polygon coverage with our common-stock universe
+    raw["ticker"] = raw["ticker"].str.upper()
+    df = raw[raw["ticker"].isin(universe_set)].copy()
+    if args.limit_universe:
+        keep = list(sorted(df["ticker"].unique()))[: args.limit_universe]
+        df = df[df["ticker"].isin(keep)]
+    log.info("After universe intersect: %d rows × %d tickers",
+             len(df), df["ticker"].nunique())
+
+    df = df.dropna(subset=["close", "volume"]).reset_index(drop=True)
+    out = CACHE / f"{asof.isoformat()}.parquet"
     sha = write_parquet_atomic(df, out)
-    log.info("Wrote %d rows to %s (sha256: %s, %d tickers failed)",
-             len(df), out, sha[:12], len(failed))
-    if failed:
-        log.info("First 10 failed: %s", failed[:10])
+    log.info("Wrote %s (%d rows, sha256: %s)", out, len(df), sha[:12])
     return 0
 
 
