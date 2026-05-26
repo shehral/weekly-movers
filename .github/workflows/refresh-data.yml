@@ -1,0 +1,71 @@
+name: Refresh screener data
+
+on:
+  schedule:
+    # 11:30 UTC ≈ 6:30am EDT / 7:30am EST. Off-the-hour minute avoids
+    # the heavy top-of-hour drift on GitHub-hosted cron.
+    - cron: '30 11 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: writeback
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      POLYGON_API_KEY: ${{ secrets.POLYGON_API_KEY }}
+      EVENT_NAME: ${{ github.event_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies (hash-locked)
+        run: pip install --require-hashes -r requirements.lock
+
+      - name: Refresh universe (Mondays + workflow_dispatch only)
+        run: |
+          if [[ $(date -u +%u) == 1 || "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            python scripts/fetch_universe.py
+          fi
+
+      - name: Fetch screen prices (Polygon Grouped Daily Bars)
+        run: python scripts/fetch_prices.py
+
+      - name: Compute screen
+        run: python scripts/compute_screens.py
+
+      - name: Fetch chart history (yfinance, screened tickers only)
+        run: python scripts/fetch_chart_history.py
+
+      - name: Generate site
+        run: python scripts/generate_site.py
+
+      - name: Commit & push (with rebase retry)
+        run: |
+          git config user.name  "weekly-movers-data-bot"
+          git config user.email "data-bot@users.noreply.github.com"
+          git add docs/ data/universe.csv data/runs/ data/sec_tickers.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "[data] Refresh $(date -u +%Y-%m-%d) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main && git push && exit 0
+            sleep $((RANDOM % 10 + 5))
+          done
+          echo "::error::Push failed after 5 retries"
+          exit 1
