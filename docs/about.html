@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>About · Weekly Movers</title>
+  <link rel="stylesheet" href="./assets/tabulator.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1><a href="./" style="color: inherit; text-decoration: none;">Weekly Movers</a></h1>
+      <div class="meta">as of 2026-05-26 ET · 6,500+ universe · 561 in screen</div>
+    </div>
+    <nav>
+      <a href="./">Screen</a>
+      <a href="./about.html">About</a>
+    </nav>
+  </header>
+
+<article style="max-width: 720px;">
+<h2 style="font-family: var(--display); font-size: var(--t-28);">How this works</h2>
+<p>Every US trading-day morning, this site refreshes a screen of NYSE + NASDAQ
+common stocks across two volatility buckets.</p>
+
+<h3>Buckets</h3>
+<ul>
+<li><strong>Bucket A — Mid-priced movers:</strong> last close $300–$800 with
+≥ $15 weekly variation by any of three definitions.</li>
+<li><strong>Bucket B — Penny movers:</strong> last close $0.79–$20 with ≥ 20%
+weekly variation by any of the same three definitions.</li>
+</ul>
+
+<p>Both buckets require a <strong>30-day average dollar volume ≥ $1,000,000</strong>
+to filter out illiquid pump-and-dump candidates.</p>
+
+<h3>Three definitions of "weekly variation"</h3>
+<p>Computed over the trailing 5 trading sessions. A stock qualifies if
+<strong>any one</strong> is true.</p>
+<div class="formulas">
+Range      = max(High) − min(Low)<br>
+5-day ret  = |Close[t] − Close[t−5]|<br>
+Max daily  = max |daily ΔClose|
+</div>
+
+<h3>Data</h3>
+<p>Screen data: <a href="https://polygon.io">Polygon.io</a> Grouped Daily Bars.
+Chart history: Yahoo Finance via <code>yfinance</code>. Prices are
+split-adjusted; corporate actions handled by the upstream feeds.</p>
+
+<h3>Limitations</h3>
+<ul>
+<li>This is descriptive, not prescriptive. A ticker on the list is volatile —
+nothing about whether that's a buy or sell.</li>
+<li>No intraday or after-hours data. Refresh is once per trading day, pre-market.</li>
+<li>Common stock only (no ETFs, ADRs, warrants, preferred).</li>
+<li>Universe drawn from NASDAQ Trader's symbol directory.</li>
+</ul>
+
+<p class="disclaimer">Nothing here constitutes investment advice. Past performance
+is not indicative of future results. Data may be delayed or inaccurate. Do your
+own research; consult a licensed advisor before making decisions.</p>
+</article>
+
+  <footer class="site-footer">
+    <details>
+      <summary>How the screen works</summary>
+      <div class="formulas">
+Trailing 5 trading days, OR-combined inclusion. Bucket A: $300–$800 with any of:<br>
+  · Range:        max(High) − min(Low) ≥ $15<br>
+  · 5-day return: |Close[t] − Close[t-5]| ≥ $15<br>
+  · Max daily:    max |daily ΔClose| ≥ $15<br>
+Bucket B: $0.79–$20 with any of those expressed as 20% relative. Both buckets require<br>
+30-day avg dollar volume ≥ $1,000,000.
+      </div>
+    </details>
+    <p class="disclaimer">
+      Not financial advice. Information only. Past performance is not indicative of future results.
+      Data may be delayed or inaccurate. The screen is descriptive — it surfaces names with recent
+      price variation; nothing here is a recommendation to buy, sell, or hold any security.
+    </p>
+    <p>Built with <a href="https://github.com/shehral/weekly-movers">weekly-movers</a> ·
+       Data: Polygon.io (screen), Yahoo Finance via yfinance (charts) ·
+       Charts: <a href="https://tradingview.github.io/lightweight-charts/">Lightweight Charts</a></p>
+  </footer>
+</body>
+</html>

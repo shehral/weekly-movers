@@ -1,0 +1,35 @@
+{% extends "base.html.j2" %}
+
+{% block title %}Weekly Movers · {{ as_of }}{% endblock %}
+
+{% block body %}
+
+<section class="bucket">
+  <div class="bucket-head">
+    <h2>Bucket A · Mid-priced movers</h2>
+    <div class="legend">$300–$800 · ≥$15 weekly variation · ≥$1M daily volume</div>
+    <div class="count">{{ bucket_a_rows | length }} names</div>
+  </div>
+  <div id="table-A"></div>
+</section>
+
+<section class="bucket">
+  <div class="bucket-head">
+    <h2>Bucket B · Penny movers</h2>
+    <div class="legend">$0.79–$20 · ≥20% weekly variation · ≥$1M daily volume</div>
+    <div class="count">{{ bucket_b_rows | length }} names</div>
+  </div>
+  <div id="table-B"></div>
+</section>
+
+<script type="application/json" id="data-A">
+{{ bucket_a_json | safe }}
+</script>
+<script type="application/json" id="data-B">
+{{ bucket_b_json | safe }}
+</script>
+
+<script src="{{ asset_root }}/assets/tabulator.min.js"></script>
+<script src="{{ asset_root }}/assets/screener.js"></script>
+
+{% endblock %}

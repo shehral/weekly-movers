@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>{% block title %}Weekly Movers{% endblock %}</title>
+  <link rel="stylesheet" href="{{ asset_root }}/assets/tabulator.min.css">
+  <link rel="stylesheet" href="{{ asset_root }}/assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1><a href="{{ asset_root }}/" style="color: inherit; text-decoration: none;">Weekly Movers</a></h1>
+      <div class="meta">as of {{ as_of }} ET · {{ universe_size }} universe · {{ screen_size }} in screen</div>
+    </div>
+    <nav>
+      <a href="{{ asset_root }}/">Screen</a>
+      <a href="{{ asset_root }}/about.html">About</a>
+    </nav>
+  </header>
+
+  {% block body %}{% endblock %}
+
+  <footer class="site-footer">
+    <details>
+      <summary>How the screen works</summary>
+      <div class="formulas">
+Trailing 5 trading days, OR-combined inclusion. Bucket A: $300–$800 with any of:<br>
+  · Range:        max(High) − min(Low) ≥ $15<br>
+  · 5-day return: |Close[t] − Close[t-5]| ≥ $15<br>
+  · Max daily:    max |daily ΔClose| ≥ $15<br>
+Bucket B: $0.79–$20 with any of those expressed as 20% relative. Both buckets require<br>
+30-day avg dollar volume ≥ $1,000,000.
+      </div>
+    </details>
+    <p class="disclaimer">
+      Not financial advice. Information only. Past performance is not indicative of future results.
+      Data may be delayed or inaccurate. The screen is descriptive — it surfaces names with recent
+      price variation; nothing here is a recommendation to buy, sell, or hold any security.
+    </p>
+    <p>Built with <a href="https://github.com/shehral/weekly-movers">weekly-movers</a> ·
+       Data: Polygon.io (screen), Yahoo Finance via yfinance (charts) ·
+       Charts: <a href="https://tradingview.github.io/lightweight-charts/">Lightweight Charts</a></p>
+  </footer>
+</body>
+</html>

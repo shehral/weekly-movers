@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 from datetime import date, datetime
 from decimal import Decimal
@@ -97,6 +98,45 @@ class ScreenRow(BaseModel):
     max_daily_value: Decimal
     max_daily_triggers: bool
     last_session_date: date
+
+
+_SEC_TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
+_SEC_TICKER_CACHE = DATA / "sec_tickers.json"
+_SEC_USER_AGENT = "weekly-movers research ali.shehral@gmail.com"
+
+
+def load_ticker_to_cik() -> dict[str, str]:
+    """Return mapping {TICKER: 10-digit zero-padded CIK string} from SEC.
+
+    Cached locally at data/sec_tickers.json; refetched if the cache is
+    missing or older than 7 days.
+    """
+    import time
+    import requests
+
+    if _SEC_TICKER_CACHE.exists():
+        age = time.time() - _SEC_TICKER_CACHE.stat().st_mtime
+        if age < 7 * 24 * 3600:
+            data = json.loads(_SEC_TICKER_CACHE.read_text())
+            return data
+
+    log = get_logger("sec_tickers")
+    log.info("Fetching SEC ticker-to-CIK mapping")
+    r = requests.get(
+        _SEC_TICKERS_URL,
+        headers={"User-Agent": _SEC_USER_AGENT},
+        timeout=30,
+    )
+    r.raise_for_status()
+    raw = r.json()
+    mapping = {
+        v["ticker"].upper(): f"{int(v['cik_str']):010d}"
+        for v in raw.values()
+    }
+    _SEC_TICKER_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    _SEC_TICKER_CACHE.write_text(json.dumps(mapping))
+    log.info("Cached %d ticker→CIK mappings", len(mapping))
+    return mapping
 
 
 TEST_UNIVERSE_50 = [

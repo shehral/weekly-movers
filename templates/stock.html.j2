@@ -1,0 +1,73 @@
+{% extends "base.html.j2" %}
+
+{% block title %}{{ row.ticker }} · Weekly Movers{% endblock %}
+
+{% block body %}
+
+<div class="stock-header">
+  <div>
+    <div class="ticker">{{ row.ticker }}</div>
+    <div class="name">{{ row.name }} · Bucket {{ row.bucket }}</div>
+  </div>
+  <div></div>
+  <div class="price">${{ '%.2f' | format(row.last_close | float) }}</div>
+</div>
+
+<section class="variation-cards">
+  <div class="variation-card {% if row.range_triggers %}triggered{% endif %}">
+    <div class="label">Range (high − low)</div>
+    <div class="value">{{ range_display }}</div>
+    <div class="formula">max(H) − min(L), trailing 5 sessions</div>
+  </div>
+  <div class="variation-card {% if row.ret_5d_triggers %}triggered{% endif %}">
+    <div class="label">5-day return</div>
+    <div class="value">{{ ret_display }}</div>
+    <div class="formula">|Close[t] − Close[t−5]|</div>
+  </div>
+  <div class="variation-card {% if row.max_daily_triggers %}triggered{% endif %}">
+    <div class="label">Max daily move</div>
+    <div class="value">{{ daily_display }}</div>
+    <div class="formula">max |daily ΔClose| in window</div>
+  </div>
+</section>
+
+<section class="chart-wrap">
+  <div class="chart-controls">
+    <button class="tf-btn active" data-days="252">1Y</button>
+    <button class="tf-btn" data-days="126">6M</button>
+    <button class="tf-btn" data-days="22">1M</button>
+  </div>
+  <div id="chart" data-bucket="{{ row.bucket }}" data-ticker="{{ row.ticker }}"></div>
+</section>
+
+<section class="stats">
+  <div class="item">
+    <div class="label">Last session</div>
+    <div class="value">{{ row.last_session_date }}</div>
+  </div>
+  <div class="item">
+    <div class="label">Avg dollar volume (30d)</div>
+    <div class="value">${{ '{:,.0f}'.format(row.avg_dollar_vol | float) }}</div>
+  </div>
+  <div class="item">
+    <div class="label">Triggers</div>
+    <div class="value">
+      <span class="badge {% if row.range_triggers %}on{% else %}off{% endif %}">RNG</span>
+      <span class="badge {% if row.ret_5d_triggers %}on{% else %}off{% endif %}">5D</span>
+      <span class="badge {% if row.max_daily_triggers %}on{% else %}off{% endif %}">MAX</span>
+    </div>
+  </div>
+</section>
+
+<div class="links">
+  <a href="https://finance.yahoo.com/quote/{{ row.ticker }}" target="_blank" rel="noopener">Yahoo Finance ↗</a>
+  {% if cik %}
+  <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={{ cik }}&type=&dateb=&owner=include&count=40" target="_blank" rel="noopener">SEC EDGAR ↗</a>
+  {% endif %}
+  <a href="https://www.google.com/search?tbm=nws&q={{ row.ticker }}+stock" target="_blank" rel="noopener">News ↗</a>
+</div>
+
+<script src="{{ asset_root }}/assets/lightweight-charts.standalone.production.js"></script>
+<script src="{{ asset_root }}/assets/stock-chart.js"></script>
+
+{% endblock %}

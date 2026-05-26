@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>WKEY · Weekly Movers</title>
+  <link rel="stylesheet" href="../assets/tabulator.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1><a href="../" style="color: inherit; text-decoration: none;">Weekly Movers</a></h1>
+      <div class="meta">as of 2026-05-26 ET · 6,500+ universe · 561 in screen</div>
+    </div>
+    <nav>
+      <a href="../">Screen</a>
+      <a href="../about.html">About</a>
+    </nav>
+  </header>
+
+
+<div class="stock-header">
+  <div>
+    <div class="ticker">WKEY</div>
+    <div class="name">WISeKey International Holding Ltd - American Depositary Shares · Bucket B</div>
+  </div>
+  <div></div>
+  <div class="price">$10.58</div>
+</div>
+
+<section class="variation-cards">
+  <div class="variation-card triggered">
+    <div class="label">Range (high − low)</div>
+    <div class="value">34.0%</div>
+    <div class="formula">max(H) − min(L), trailing 5 sessions</div>
+  </div>
+  <div class="variation-card triggered">
+    <div class="label">5-day return</div>
+    <div class="value">22.0%</div>
+    <div class="formula">|Close[t] − Close[t−5]|</div>
+  </div>
+  <div class="variation-card ">
+    <div class="label">Max daily move</div>
+    <div class="value">9.0%</div>
+    <div class="formula">max |daily ΔClose| in window</div>
+  </div>
+</section>
+
+<section class="chart-wrap">
+  <div class="chart-controls">
+    <button class="tf-btn active" data-days="252">1Y</button>
+    <button class="tf-btn" data-days="126">6M</button>
+    <button class="tf-btn" data-days="22">1M</button>
+  </div>
+  <div id="chart" data-bucket="B" data-ticker="WKEY"></div>
+</section>
+
+<section class="stats">
+  <div class="item">
+    <div class="label">Last session</div>
+    <div class="value">2026-05-22</div>
+  </div>
+  <div class="item">
+    <div class="label">Avg dollar volume (30d)</div>
+    <div class="value">$1,165,901</div>
+  </div>
+  <div class="item">
+    <div class="label">Triggers</div>
+    <div class="value">
+      <span class="badge on">RNG</span>
+      <span class="badge on">5D</span>
+      <span class="badge off">MAX</span>
+    </div>
+  </div>
+</section>
+
+<div class="links">
+  <a href="https://finance.yahoo.com/quote/WKEY" target="_blank" rel="noopener">Yahoo Finance ↗</a>
+  <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001738699&type=&dateb=&owner=include&count=40" target="_blank" rel="noopener">SEC EDGAR ↗</a>
+  <a href="https://www.google.com/search?tbm=nws&q=WKEY+stock" target="_blank" rel="noopener">News ↗</a>
+</div>
+
+<script src="../assets/lightweight-charts.standalone.production.js"></script>
+<script src="../assets/stock-chart.js"></script>
+
+
+  <footer class="site-footer">
+    <details>
+      <summary>How the screen works</summary>
+      <div class="formulas">
+Trailing 5 trading days, OR-combined inclusion. Bucket A: $300–$800 with any of:<br>
+  · Range:        max(High) − min(Low) ≥ $15<br>
+  · 5-day return: |Close[t] − Close[t-5]| ≥ $15<br>
+  · Max daily:    max |daily ΔClose| ≥ $15<br>
+Bucket B: $0.79–$20 with any of those expressed as 20% relative. Both buckets require<br>
+30-day avg dollar volume ≥ $1,000,000.
+      </div>
+    </details>
+    <p class="disclaimer">
+      Not financial advice. Information only. Past performance is not indicative of future results.
+      Data may be delayed or inaccurate. The screen is descriptive — it surfaces names with recent
+      price variation; nothing here is a recommendation to buy, sell, or hold any security.
+    </p>
+    <p>Built with <a href="https://github.com/shehral/weekly-movers">weekly-movers</a> ·
+       Data: Polygon.io (screen), Yahoo Finance via yfinance (charts) ·
+       Charts: <a href="https://tradingview.github.io/lightweight-charts/">Lightweight Charts</a></p>
+  </footer>
+</body>
+</html>
