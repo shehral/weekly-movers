@@ -4,6 +4,16 @@
 
 {% block body %}
 
+{% if markets_closed_today %}
+<div style="background: rgba(245, 196, 81, 0.08); border: 1px solid rgba(245, 196, 81, 0.4); padding: var(--s-3); border-radius: 4px; margin-bottom: var(--s-4);">
+  <strong style="color: var(--trigger);">Markets are closed today.</strong>
+  <span style="color: var(--text-md);">
+    Showing the screen as of the last completed trading session ({{ last_session }}).
+    The screen refreshes Mon–Fri before US market open.
+  </span>
+</div>
+{% endif %}
+
 <section class="bucket">
   <div class="bucket-head">
     <h2>Bucket A · Mid-priced movers</h2>

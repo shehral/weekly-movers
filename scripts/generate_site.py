@@ -30,6 +30,7 @@ from _common import (
     RUNS,
     atomic_write_text,
     get_logger,
+    is_trading_day,
     load_ticker_to_cik,
     safe_resolve_under,
     today_et,
@@ -95,6 +96,44 @@ def _build_chart_bundle(history: pd.DataFrame, tickers: list[str]) -> dict[str, 
     return bundle
 
 
+def _build_sparkline(closes: list[float], width: int = 56, height: int = 14) -> str:
+    """Return an inline SVG path string for a sparkline of the last N closes.
+
+    Uses --accent at 35% opacity for the line; no axes, no labels. Designed
+    to sit behind/beside the ticker cell in the index table.
+    """
+    if len(closes) < 2:
+        return ""
+    lo = min(closes)
+    hi = max(closes)
+    span = hi - lo
+    if span == 0:
+        return ""
+    n = len(closes)
+    pts = []
+    for i, c in enumerate(closes):
+        x = round(i * (width - 1) / (n - 1), 2)
+        y = round((height - 1) - (c - lo) * (height - 1) / span, 2)
+        pts.append(f"{x},{y}")
+    polyline = " ".join(pts)
+    last_color = "#4ADE80" if closes[-1] >= closes[0] else "#F87171"
+    return (
+        f'<svg viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
+        f'aria-hidden="true" style="vertical-align: middle; opacity: 0.85;">'
+        f'<polyline points="{polyline}" fill="none" stroke="{last_color}" '
+        f'stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>'
+        f'</svg>'
+    )
+
+
+def _sparkline_for_ticker(bundle: dict[str, list[dict]], ticker: str, n_days: int = 30) -> str:
+    candles = bundle.get(ticker, [])
+    if not candles:
+        return ""
+    closes = [c["c"] for c in candles[-n_days:]]
+    return _build_sparkline(closes)
+
+
 def _format_variation(row: pd.Series) -> tuple[str, str, str]:
     if row["bucket"] == "A":
         rng = f"${Decimal(str(row['range_value'])):.2f}"
@@ -154,9 +193,17 @@ def _delete_stale_stock_pages(active_tickers: set[str]) -> int:
     return deleted
 
 
-def _write_index(rows_a: list[pd.Series], rows_b: list[pd.Series], context: dict) -> None:
-    data_a = [_row_for_table(r) for r in rows_a]
-    data_b = [_row_for_table(r) for r in rows_b]
+def _write_index(rows_a: list[pd.Series], rows_b: list[pd.Series],
+                  context: dict, bundle: dict[str, list[dict]]) -> None:
+    def _augment(rows):
+        out = []
+        for r in rows:
+            d = _row_for_table(r)
+            d["spark"] = _sparkline_for_ticker(bundle, str(r["ticker"]))
+            out.append(d)
+        return out
+    data_a = _augment(rows_a)
+    data_b = _augment(rows_b)
     ctx = {
         **context,
         "bucket_a_rows": rows_a,
@@ -210,6 +257,20 @@ def _write_about(context: dict) -> None:
     log.info("Wrote %s", out)
 
 
+def _write_notes_index(context: dict) -> None:
+    notes_dir = DOCS / "notes"
+    notes_dir.mkdir(parents=True, exist_ok=True)
+    notes = []
+    for path in sorted(notes_dir.glob("*.html"), reverse=True):
+        if path.stem == "index":
+            continue
+        notes.append({"date": path.stem})
+    template = env.get_template("notes_index.html.j2")
+    out = notes_dir / "index.html"
+    atomic_write_text(out, template.render(**context, notes=notes, asset_root=".."))
+    log.info("Wrote %s (%d notes listed)", out, len(notes))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--asof", type=str, default=None)
@@ -230,10 +291,13 @@ def main() -> int:
     history = _load_chart_history(asof)
     bundle = _build_chart_bundle(history, sorted(active_tickers))
 
+    last_session = pd.to_datetime(run["last_session_date"]).max().date()
     context = {
         "as_of": asof.isoformat(),
         "universe_size": "6,500+",
         "screen_size": len(run),
+        "markets_closed_today": not is_trading_day(asof),
+        "last_session": last_session.isoformat(),
     }
 
     DOCS.mkdir(parents=True, exist_ok=True)
@@ -243,9 +307,10 @@ def main() -> int:
 
     cik_map = load_ticker_to_cik()
     _write_chart_data(bundle, asof)
-    _write_index(rows_a, rows_b, context)
+    _write_index(rows_a, rows_b, context, bundle)
     _write_stock_pages(all_rows, context, cik_map)
     _write_about(context)
+    _write_notes_index(context)
     log.info("Site generated")
     return 0
 

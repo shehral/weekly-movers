@@ -33,7 +33,8 @@
 
   const tickerLink = (cell) => {
     const t = cell.getValue();
-    return `<a href="stocks/${t}.html" class="ticker">${t}</a>`;
+    const spark = cell.getRow().getData().spark || '';
+    return `<a href="stocks/${t}.html" class="ticker">${t}</a><span class="spark">${spark}</span>`;
   };
 
   function makeColumns(bucket) {
