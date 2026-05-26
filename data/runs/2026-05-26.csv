@@ -1,4 +1,4 @@
-# parquet_sha256=ed5ec62ff3715cc87d900a24511576f60cb446f31414c51e6c7a83a9e9f7d1db
+# parquet_sha256=96b6fcc021cc65de1587f2e2e8e1dd6094bf60a3b06879194c461515c5ba5cee
 ticker,bucket,name,sector,last_close,avg_dollar_vol,range_value,range_triggers,ret_5d_value,ret_5d_triggers,max_daily_value,max_daily_triggers,last_session_date
 AAPL,A,Apple Inc. - Common Stock,,308.82,13229804974.69,16.49,True,10.98,False,3.83,False,2026-05-22
 ADI,A,"Analog Devices, Inc. - Common Stock",,397.07,1545670671.78,47.46,True,21.51,True,16.26,True,2026-05-22

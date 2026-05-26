@@ -982,9 +982,7 @@ BTE,Baytex Energy Corp Common Shares,NYSE
 BTG,B2Gold Corp Common shares (Canada),NYSE-MKT
 BTGO,"BitGo Holdings, Inc. Class A Common Stock",NYSE
 BTI,"British American Tobacco  Industries, p.l.c. Common Stock ADR",NYSE
-BTM,Bitcoin Depot Inc. - Class A Common Stock,NASDAQ
 BTMD,Biote Corp. - Class A common stock,NASDAQ
-BTMWW,Bitcoin Depot Inc. - Warrant,NASDAQ
 BTO,John Hancock Financial Opportunities Fund Common Stock,NYSE
 BTOG,Bit Origin Limited - Class A Ordinary Shares,NASDAQ
 BTQ,BTQ Technologies Corp. - Common Stock,NASDAQ
@@ -2129,7 +2127,6 @@ FCNCO,"First Citizens BancShares, Inc. - 5.625% Non-Cumulative Perpetual Preferr
 FCNCP,"First Citizens BancShares, Inc. - Depositary Shares Each Representing a 1/40th Interest in a Share of 5.375% Non-Cumulative Perpetual Preferred Stock, Series A",NASDAQ
 FCPT,"Four Corners Property Trust, Inc. Common Stock",NYSE
 FCRS,FutureCrest Acquisition Corp. Class A Ordinary Shares,NYSE
-FCRX,"Crescent Capital BDC, Inc. 5.00% Notes due 2026",NYSE
 FCT,First Trust Senior Floating Rate Income Fund II Common Shares of Beneficial Interest,NYSE
 FCUV,Focus Universal Inc. - Common Stock,NASDAQ
 FCX,"Freeport-McMoRan, Inc. Common Stock",NYSE
@@ -2459,9 +2456,6 @@ GIBO,GIBO Holdings Limited - Class A Ordinary Shares,NASDAQ
 GIBOW,GIBO Holdings Limited - Warrants,NASDAQ
 GIC,Global Industrial Company Common Stock,NYSE
 GIFT,"Giftify, Inc. - Common Stock",NASDAQ
-GIG,GigCapital7 Corp. - Class A Ordinary Share,NASDAQ
-GIGGU,GigCapital7 Corp. - Unit,NASDAQ
-GIGGW,GigCapital7 Corp. - Warrant,NASDAQ
 GIGM,GigaMedia Limited - Ordinary Shares,NASDAQ
 GIII,"G-III Apparel Group, LTD. - Common Stock",NASDAQ
 GIL,"Gildan Activewear, Inc. Class A Sub. Vot. Common Stock",NYSE
@@ -2487,8 +2481,8 @@ GLBE,Global-E Online Ltd. - ordinary shares,NASDAQ
 GLBS,Globus Maritime Limited - Common Stock,NASDAQ
 GLDG,GoldMining Inc. Common Shares,NYSE-MKT
 GLED,GalaxyEdge Acquisition Corporation Ordinary Shares,NYSE
-GLIBA,"GCI Liberty, Inc. - Series A GCI Group Common Stock",NASDAQ
-GLIBK,"GCI Liberty, Inc. - Series C GCI Group Common Stock",NASDAQ
+GLIBA,Liberty Capital Corporation - Series A GCI Group Common Stock,NASDAQ
+GLIBK,Liberty Capital Corporation - Series C GCI Group Common Stock,NASDAQ
 GLND,Greenland Energy Company - Common Stock,NASDAQ
 GLNDW,Greenland Energy Company - Warrant,NASDAQ
 GLNG,Golar LNG Limited - Common Shares,NASDAQ
@@ -2689,6 +2683,8 @@ HCXY,"Hercules Capital, Inc. 6.25% Notes due 2033",NYSE
 HD,"Home Depot, Inc. (The) Common Stock",NYSE
 HDB,HDFC Bank Limited Common Stock,NYSE
 HDL,SUPER HI INTERNATIONAL HOLDING LTD. - American Depositary Shares,NASDAQ
+HDRN,"Hadron Energy, Inc. - Common Stock",NASDAQ
+HDRNW,"Hadron Energy, Inc. - Warrant",NASDAQ
 HDSN,"Hudson Technologies, Inc. - Common Stock",NASDAQ
 HE,"Hawaiian Electric Industries, Inc. Common Stock",NYSE
 HEI,Heico Corporation Common Stock,NYSE
@@ -4139,7 +4135,6 @@ NRP,Natural Resource Partners LP Limited Partnership,NYSE
 NRT,North European Oil Royality Trust Common Stock,NYSE
 NRUC,National Rural Utilities Cooperative Finance Corporation 5.500% Subordinated Notes due 2064 (Subordinated Deferrable Interest Notes),NYSE
 NRXP,"NRX Pharmaceuticals, Inc. - Common Stock",NASDAQ
-NRXPW,"NRX Pharmaceuticals, Inc. - Warrant",NASDAQ
 NRXS,"Neuraxis, Inc. Common Stock",NYSE-MKT
 NSA,National Storage Affiliates Trust Common Shares of Beneficial Interest,NYSE
 NSC,Norfolk Southern Corporation Common Stock,NYSE
@@ -6018,7 +6013,6 @@ USEA,United Maritime Corporation - Common Stock,NASDAQ
 USEG,U.S. Energy Corp. - Common Stock,NASDAQ
 USFD,US Foods Holding Corp. Common Stock,NYSE
 USGO,U.S. GoldMining Inc. - Common stock,NASDAQ
-USGOW,U.S. GoldMining Inc. - Warrant,NASDAQ
 USIO,"Usio, Inc. - Common Stock",NASDAQ
 USLM,"United States Lime & Minerals, Inc. - Common Stock",NASDAQ
 USNA,"USANA Health Sciences, Inc. Common Stock",NYSE
