@@ -1,0 +1,300 @@
+{% extends "base.html.j2" %}
+{% block title %}About · Weekly Movers{% endblock %}
+{% block body %}
+<article style="max-width: 760px; margin: 0 auto;">
+
+<h2 style="font-family: var(--display); font-size: var(--t-28); margin-top: 0;">
+  What this is
+</h2>
+<p>
+  Every US trading-day morning before market open, this site refreshes a
+  volatility screen across the NYSE + NASDAQ common-stock universe (~6,500
+  tickers). It surfaces names with notable recent price movement in two
+  price ranges, using three complementary definitions of "movement".
+</p>
+<p>
+  This is a personal research artifact, open-source, free, no sign-up. The
+  math is published below in full. Use it as a starting point for your own
+  research — nothing here is a recommendation.
+</p>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  The two buckets
+</h2>
+<table style="width: 100%; border-collapse: collapse; margin: var(--s-3) 0;">
+  <thead>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align: left; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Bucket</th>
+      <th style="text-align: left; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Price range</th>
+      <th style="text-align: left; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Variation threshold</th>
+      <th style="text-align: left; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Catches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: var(--s-2);"><strong>A — Mid-priced</strong></td>
+      <td style="padding: var(--s-2); font-family: var(--mono);">$300 – $800</td>
+      <td style="padding: var(--s-2); font-family: var(--mono);">≥ $15 weekly</td>
+      <td style="padding: var(--s-2);">Volatile mid-caps</td>
+    </tr>
+    <tr>
+      <td style="padding: var(--s-2);"><strong>B — Penny</strong></td>
+      <td style="padding: var(--s-2); font-family: var(--mono);">$0.79 – $20</td>
+      <td style="padding: var(--s-2); font-family: var(--mono);">≥ 20% weekly</td>
+      <td style="padding: var(--s-2);">Penny / small-cap momentum</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Both buckets also require <strong>30-day average dollar volume ≥ $1,000,000</strong>
+  to filter out illiquid names where a quoted "move" doesn't reflect real
+  trading activity.
+</p>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  Three measures of "weekly variation"
+</h2>
+<p>
+  Each computed over the <strong>trailing 5 trading sessions</strong>
+  (holiday-aware — if Memorial Day falls in the window, "5 sessions" might
+  span 7 calendar days). A ticker qualifies for its bucket if <strong>any
+  one</strong> of the three exceeds the threshold. The screen shows all
+  three values side-by-side, with badges indicating which triggered.
+</p>
+
+<h3 style="margin-top: var(--s-4);">1 · Range — <code>max(High) − min(Low)</code></h3>
+<p>
+  The highest intra-week high minus the lowest intra-week low.
+</p>
+<ul>
+  <li><strong>Catches:</strong> choppy, two-sided volatility. A stock that
+  swung up to $100 and down to $80 within the week, even if it ended the
+  week at $90.</li>
+  <li><strong>Misses:</strong> smooth trends. A stock that gained $1 every
+  day for 5 days has a small range (just the daily volatility) but a big
+  total move — that's caught by 5-day return below.</li>
+  <li><strong>Bucket A:</strong> ≥ $15 dollar swing.</li>
+  <li><strong>Bucket B:</strong> <code>max(H)/min(L) − 1 ≥ 20%</code> —
+  the relative form. A penny stock going $1 ↔ $1.20 has a 20% range.</li>
+</ul>
+
+<h3>2 · 5-day return — <code>|Close[t] − Close[t−5]|</code></h3>
+<p>
+  The dollar (or percent) distance from where the stock closed 5 sessions
+  ago to where it closes today. Absolute value — direction doesn't matter
+  for the screen.
+</p>
+<ul>
+  <li><strong>Catches:</strong> directional trends, sustained moves. The
+  stock that ground up $5 over the week even though no single day was
+  eventful.</li>
+  <li><strong>Misses:</strong> round-trips. A stock that goes $100 → $120 →
+  $100 has zero 5-day return despite huge intra-week movement (the Range
+  measure catches that one).</li>
+  <li><strong>Bucket A:</strong> ≥ $15.</li>
+  <li><strong>Bucket B:</strong> <code>|Close[t]/Close[t−5] − 1| ≥ 20%</code>.</li>
+</ul>
+
+<h3>3 · Max daily move — <code>max(|daily ΔClose|)</code> over the 5 sessions</h3>
+<p>
+  The single biggest one-day close-to-close change in the window.
+</p>
+<ul>
+  <li><strong>Catches:</strong> event-driven spikes. The stock that was
+  flat 4 days, then moved $20 on day 5 (earnings, M&amp;A, FDA decision,
+  downgrade).</li>
+  <li><strong>Misses:</strong> slow grinders. A stock with $3 daily moves
+  and a $15 weekly total has Max daily = $3 — that's caught by 5-day
+  return.</li>
+  <li><strong>Bucket A:</strong> ≥ $15 single-day swing.</li>
+  <li><strong>Bucket B:</strong> ≥ 20% single-day swing.</li>
+</ul>
+
+<h3>Why three measures? Three mover archetypes.</h3>
+<p>
+  "The stock moved a lot this week" is genuinely ambiguous — there are at
+  least three distinct mover types, and any single measure misses two of
+  them:
+</p>
+<table style="width: 100%; border-collapse: collapse; margin: var(--s-3) 0;">
+  <thead>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <th style="text-align: left; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Archetype</th>
+      <th style="text-align: center; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Range</th>
+      <th style="text-align: center; padding: var(--s-2); color: var(--text-md); font-weight: 500;">5-day ret</th>
+      <th style="text-align: center; padding: var(--s-2); color: var(--text-md); font-weight: 500;">Max daily</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: var(--s-2);">Choppy mean-reverter</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--up);">high</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--text-lo);">low</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--neutral);">medium</td>
+    </tr>
+    <tr style="border-bottom: 1px solid var(--border);">
+      <td style="padding: var(--s-2);">Momentum trender</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--neutral);">medium</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--up);">high</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--text-lo);">low</td>
+    </tr>
+    <tr>
+      <td style="padding: var(--s-2);">News-event mover</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--text-lo);">low</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--text-lo);">low</td>
+      <td style="padding: var(--s-2); text-align: center; color: var(--up);">high</td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  <strong>OR-combined</strong> inclusion lets all three archetypes onto the
+  list. The <strong>side-by-side display</strong> lets you sort or filter
+  on whichever you care about. A stock that triggers all three at once
+  (RNG + 5D + MAX badges all amber) is genuinely unusual — both choppy AND
+  trending AND event-driven in the same week.
+</p>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  How to read the index page
+</h2>
+<ul>
+  <li><strong>Two sortable tables:</strong> Bucket A on top, Bucket B
+  below. Default sort: largest Range first.</li>
+  <li><strong>Click a column header</strong> to re-sort by that column.</li>
+  <li><strong>Type in the column filter</strong> (under the column name)
+  to filter live.</li>
+  <li><strong>Trigger column</strong> shows three badges per row:
+    <ul>
+      <li><span style="display:inline-block;padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--trigger);background:rgba(245,196,81,0.12);border:1px solid rgba(245,196,81,0.5);">RNG</span>
+        — the Range measure triggered</li>
+      <li><span style="display:inline-block;padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--trigger);background:rgba(245,196,81,0.12);border:1px solid rgba(245,196,81,0.5);">5D</span>
+        — the 5-day return measure triggered</li>
+      <li><span style="display:inline-block;padding:1px 6px;border-radius:3px;font-family:var(--mono);font-size:10px;font-weight:600;color:var(--trigger);background:rgba(245,196,81,0.12);border:1px solid rgba(245,196,81,0.5);">MAX</span>
+        — the Max daily measure triggered</li>
+    </ul>
+    Dim badges (no fill) mean the measure didn't trigger — but the value
+    is still shown so you can see how close it was.</li>
+  <li><strong>Click a ticker</strong> to open its detail page.</li>
+</ul>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  How to read a stock dashboard
+</h2>
+<p>
+  Each detail page shows the same data through the lens of one ticker. The
+  layout, top to bottom:
+</p>
+<ol>
+  <li><strong>Header:</strong> ticker, company name, bucket (A or B), and
+  the last close price as of the most recent trading session.</li>
+  <li><strong>Three variation cards:</strong> the exact numerical values
+  used by the screen. Cards with <span style="color: var(--trigger);">amber
+  borders and amber values</span> triggered; the rest are shown for context.
+  The formula appears below each card so you don't have to remember which
+  is which.</li>
+  <li><strong>Candlestick chart:</strong> ~250 trading days of price
+  history.
+    <ul>
+      <li>Each candle = one trading day. <span style="color: var(--up);">Green</span>
+      means the close was above the open; <span style="color: var(--down);">red</span>
+      means below.</li>
+      <li>The thin "wick" above and below each candle's body shows that
+      day's full High–Low range.</li>
+      <li><strong>Amber-tinted candles at the right edge are the last 5
+      sessions</strong> — the window the screen evaluates. This is the
+      visual anchor for the variation numbers in the cards above.</li>
+      <li>Volume bars at the bottom of the chart in matching green/red.</li>
+      <li>The 1Y / 6M / 1M buttons re-slice the same in-memory data — no
+      re-fetch, no flicker.</li>
+      <li><strong>Bucket B charts default to a logarithmic y-axis</strong>
+      so equal-percentage moves look like equal heights ($1 → $1.50 reads
+      the same height as $10 → $15). Bucket A uses a linear axis.</li>
+    </ul>
+  </li>
+  <li><strong>Stats block:</strong> last session date, 30-day average
+  dollar volume, and a copy of the three trigger badges.</li>
+  <li><strong>Outbound links:</strong>
+    <ul>
+      <li><strong>Yahoo Finance</strong> — quick price/news/financials.</li>
+      <li><strong>SEC EDGAR</strong> — official filings (10-K, 10-Q, 8-K).
+      We look up the CIK from SEC's ticker mapping so the link lands on
+      the right company even for ADRs and similar.</li>
+      <li><strong>News</strong> — Google News search for the ticker.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  Filters applied before the variation math
+</h2>
+<p>
+  Performance-wise, the variation math runs on a pre-filtered universe.
+  Order of operations each day:
+</p>
+<ol>
+  <li><strong>Universe gate:</strong> common stock only. ETFs, ADRs from
+  SPACs, warrants, preferred stock, and rights are dropped upstream in the
+  universe-fetch step.</li>
+  <li><strong>Price band:</strong> Bucket A <code>$300 ≤ last_close ≤ $800</code>;
+  Bucket B <code>$0.79 ≤ last_close ≤ $20</code>. Most of the ~6,500-name
+  universe drops out here.</li>
+  <li><strong>Volume floor:</strong> 30-day average dollar volume
+  <code>≥ $1,000,000</code>. Filters illiquid names where a quoted "move"
+  is meaningless.</li>
+  <li><strong>Variation math:</strong> only now do we compute the three
+  measures and OR-combine for inclusion.</li>
+</ol>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  Data sources &amp; subtleties
+</h2>
+<ul>
+  <li><strong>Screen data:</strong> <a href="https://polygon.io">Polygon.io
+  Grouped Daily Bars</a> — one API call returns OHLC for every US stock
+  for a given trading day. Adjusted for splits and dividends.</li>
+  <li><strong>Chart history:</strong> Yahoo Finance via <code>yfinance</code>.
+  Used only for the ~500 tickers that make today's screen, which keeps
+  request volume well under Yahoo's per-IP rate limit.</li>
+  <li><strong>Split adjustment:</strong> both feeds use split-adjusted
+  prices. A stock that did a 2-for-1 split last Tuesday won't show a fake
+  −50% daily move — the historical leg of every comparison is already
+  divided. This is correct behavior; the security genuinely didn't move
+  in the split-adjusted frame.</li>
+  <li><strong>Trading-session window:</strong> "trailing 5 sessions",
+  not "5 calendar days." If holidays fall in the window, the math still
+  uses 5 actual trading sessions. Computed via
+  <code>pandas_market_calendars</code>'s NYSE calendar.</li>
+  <li><strong>"As of" timestamps:</strong> the screen reflects the most
+  recent <em>completed</em> session. If today is Tuesday and we refresh at
+  7am ET, the screen uses Monday's close. The chart on detail pages may
+  show fresher (intraday or pre-market) data because yfinance hits Yahoo's
+  live feed; the screen uses Polygon's confirmed daily bar.</li>
+</ul>
+
+<h2 style="font-family: var(--display); font-size: var(--t-23);">
+  Known limitations
+</h2>
+<ul>
+  <li>Descriptive, not predictive. A name on this list is volatile —
+  nothing about whether that's an opportunity or a trap.</li>
+  <li>No intraday or after-hours data. The screen refreshes once per
+  trading day, pre-market.</li>
+  <li>Common stock only — no ETFs, ADRs from SPACs, warrants, preferred,
+  rights.</li>
+  <li>Universe drawn from NASDAQ Trader's symbol directory; small names
+  not in that directory won't appear.</li>
+  <li>Polygon free tier has a 5-call/minute limit; rarely the final
+  day's data can be missed on a given run (≤ 1 session of staleness).</li>
+  <li>This screen does not adjust for sector, market cap, or beta. A
+  high-beta name and a normally-calm name with one shock day appear
+  side-by-side.</li>
+</ul>
+
+<p class="disclaimer">
+  Nothing here constitutes investment advice. Past performance is not
+  indicative of future results. Data may be delayed or inaccurate. Do your
+  own research and consult a licensed advisor before making decisions.
+</p>
+
+</article>
+{% endblock %}

@@ -204,57 +204,9 @@ def _write_chart_data(bundle: dict, asof: date) -> None:
 
 
 def _write_about(context: dict) -> None:
-    about_template = env.from_string("""
-{% extends "base.html.j2" %}
-{% block title %}About · Weekly Movers{% endblock %}
-{% block body %}
-<article style="max-width: 720px;">
-<h2 style="font-family: var(--display); font-size: var(--t-28);">How this works</h2>
-<p>Every US trading-day morning, this site refreshes a screen of NYSE + NASDAQ
-common stocks across two volatility buckets.</p>
-
-<h3>Buckets</h3>
-<ul>
-<li><strong>Bucket A — Mid-priced movers:</strong> last close $300–$800 with
-≥ $15 weekly variation by any of three definitions.</li>
-<li><strong>Bucket B — Penny movers:</strong> last close $0.79–$20 with ≥ 20%
-weekly variation by any of the same three definitions.</li>
-</ul>
-
-<p>Both buckets require a <strong>30-day average dollar volume ≥ $1,000,000</strong>
-to filter out illiquid pump-and-dump candidates.</p>
-
-<h3>Three definitions of "weekly variation"</h3>
-<p>Computed over the trailing 5 trading sessions. A stock qualifies if
-<strong>any one</strong> is true.</p>
-<div class="formulas">
-Range      = max(High) − min(Low)<br>
-5-day ret  = |Close[t] − Close[t−5]|<br>
-Max daily  = max |daily ΔClose|
-</div>
-
-<h3>Data</h3>
-<p>Screen data: <a href="https://polygon.io">Polygon.io</a> Grouped Daily Bars.
-Chart history: Yahoo Finance via <code>yfinance</code>. Prices are
-split-adjusted; corporate actions handled by the upstream feeds.</p>
-
-<h3>Limitations</h3>
-<ul>
-<li>This is descriptive, not prescriptive. A ticker on the list is volatile —
-nothing about whether that's a buy or sell.</li>
-<li>No intraday or after-hours data. Refresh is once per trading day, pre-market.</li>
-<li>Common stock only (no ETFs, ADRs, warrants, preferred).</li>
-<li>Universe drawn from NASDAQ Trader's symbol directory.</li>
-</ul>
-
-<p class="disclaimer">Nothing here constitutes investment advice. Past performance
-is not indicative of future results. Data may be delayed or inaccurate. Do your
-own research; consult a licensed advisor before making decisions.</p>
-</article>
-{% endblock %}
-""")
+    template = env.get_template("about.html.j2")
     out = DOCS / "about.html"
-    atomic_write_text(out, about_template.render(**context, asset_root="."))
+    atomic_write_text(out, template.render(**context, asset_root="."))
     log.info("Wrote %s", out)
 
 
