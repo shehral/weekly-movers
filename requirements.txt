@@ -1,0 +1,12 @@
+yfinance==1.4.0
+pandas==2.2.3
+pyarrow==18.1.0
+pandas-market-calendars==4.4.2
+jinja2==3.1.5
+requests==2.32.3
+markdown-it-py==3.0.0
+anthropic==0.42.0
+bleach==6.2.0
+curl-cffi==0.15.0
+tenacity==9.0.0
+pydantic==2.10.4
