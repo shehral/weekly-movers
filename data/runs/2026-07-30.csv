@@ -1,0 +1,617 @@
+# parquet_sha256=07f8386d86e138f258ae5c40342b30c4bb6f4cf3473cfa821d36919efb41d408
+ticker,bucket,name,sector,last_close,avg_dollar_vol,range_value,range_triggers,ret_5d_value,ret_5d_triggers,max_daily_value,max_daily_triggers,last_session_date
+AAPL,A,Apple Inc. - Common Stock,,338.19,18522430121.82,25.22,True,16.53,True,11.36,False,2026-07-29
+ADI,A,"Analog Devices, Inc. - Common Stock",,353.37,1937416197.54,30.23,True,26.83,True,12.46,False,2026-07-29
+AGX,A,"Argan, Inc. Common Stock",,492.35,233385286.69,136.64,True,109.95,True,33.38,True,2026-07-29
+AIT,A,"Applied Industrial Technologies, Inc. Common Stock",,334.36,103710274.88,20.84,True,9.72,False,13.68,False,2026-07-29
+AMAT,A,"Applied Materials, Inc. - Common Stock",,436.45,6514281261.98,140.16,True,126.35,True,40.43,True,2026-07-29
+AMD,A,"Advanced Micro Devices, Inc. - Common Stock",,429.56,15225733800.32,132.46,True,110.13,True,40.33,True,2026-07-29
+AMG,A,"Affiliated Managers Group, Inc. Common Stock",,360.07,103871234.50,36.56,True,12.30,False,10.52,False,2026-07-29
+AMGN,A,Amgen Inc. - Common Stock,,387.64,960159832.19,38.79,True,16.14,True,16.84,True,2026-07-29
+AMP,A,"Ameriprise Financial, Inc. Common Stock",,540.29,369509195.77,42.72,True,20.18,True,9.11,False,2026-07-29
+AON,A,Aon plc Class A Ordinary Shares (Ireland),,377.16,550673540.12,31.51,True,21.38,True,14.09,False,2026-07-29
+APP,A,Applovin Corporation - Class A Common Stock,,399.46,2662409744.16,33.97,True,0.60,False,20.75,True,2026-07-29
+AVGO,A,Broadcom Inc. - Common Stock,,370.32,9381735880.41,28.10,True,22.15,True,10.59,False,2026-07-29
+AXON,A,"Axon Enterprise, Inc. - Common Stock",,531.20,538329151.04,78.50,True,39.30,True,23.14,True,2026-07-29
+AXP,A,American Express Company Common Stock,,331.50,1155262647.29,26.71,True,9.34,False,14.67,False,2026-07-29
+AYI,A,Acuity Inc. Common Stock,,333.75,147513105.97,20.41,True,6.78,False,10.43,False,2026-07-29
+BAP,A,Credicorp Ltd. Common Stock,,383.93,127787719.45,15.16,True,3.70,False,5.02,False,2026-07-29
+BH,A,Biglari Holdings Inc. Class B Common Stock,,382.51,41594639.27,45.30,True,0.81,False,7.93,False,2026-07-29
+BIO,A,"Bio-Rad Laboratories, Inc. Class A Common Stock",,327.25,98708213.96,29.50,True,10.87,False,14.59,False,2026-07-29
+BRKRP,A,"Bruker Corporation - 6.375% Mandatory Convertible Preferred Stock, Series A",,456.07,3232339.99,28.33,True,1.56,False,18.74,True,2026-07-29
+BURL,A,"Burlington Stores, Inc. Common Stock",,371.13,222266602.59,41.21,True,31.65,True,12.00,False,2026-07-29
+CACC,A,Credit Acceptance Corporation - Common Stock,,556.71,109621241.63,70.77,True,35.86,True,21.35,True,2026-07-29
+CACI,A,"CACI International, Inc. Class A Common Stock",,487.79,139083092.62,42.22,True,7.18,False,22.27,True,2026-07-29
+CAT,A,"Caterpillar, Inc. Common Stock",,782.71,3466618498.72,133.60,True,111.83,True,58.14,True,2026-07-29
+CB,A,Chubb Limited  Common Stock,,361.90,686621442.45,24.13,True,8.65,False,6.50,False,2026-07-29
+CBOE,A,"Cboe Global Markets, Inc. Common Stock",,307.81,405896735.87,31.79,True,22.95,True,10.42,False,2026-07-29
+CDNS,A,"Cadence Design Systems, Inc. - Common Stock",,332.76,918396977.49,29.63,True,2.30,False,12.37,False,2026-07-29
+CHE,A,Chemed Corp,,539.36,91963966.32,55.93,True,36.35,True,21.73,True,2026-07-29
+CIEN,A,Ciena Corporation Common Stock,,330.37,1161012496.78,92.51,True,77.16,True,26.76,True,2026-07-29
+CLH,A,"Clean Harbors, Inc. Common Stock",,326.34,146376757.53,36.10,True,19.87,True,22.67,True,2026-07-29
+CLS,A,"Celestica, Inc. Common Stock",,328.43,760439996.88,62.24,True,6.32,False,31.96,True,2026-07-29
+CMI,A,Cummins Inc. Common Stock,,606.00,733195649.32,73.99,True,59.03,True,35.60,True,2026-07-29
+COR,A,"Cencora, Inc. Common Stock",,318.61,454935652.60,24.53,True,13.55,False,8.43,False,2026-07-29
+CPAY,A,"Corpay, Inc. Common Stock",,392.85,241603634.76,45.98,True,28.05,True,9.13,False,2026-07-29
+CRS,A,Carpenter Technology Corporation Common Stock,,530.62,485194170.73,91.89,True,70.92,True,29.81,True,2026-07-29
+CSL,A,Carlisle Companies Incorporated Common Stock,,334.54,198236092.47,32.55,True,2.99,False,13.18,False,2026-07-29
+CVCO,A,"Cavco Industries, Inc. - Common Stock",,565.24,66679029.47,41.98,True,3.14,False,23.84,True,2026-07-29
+CW,A,Curtiss-Wright Corporation Common Stock,,679.41,213140879.82,94.06,True,70.62,True,49.39,True,2026-07-29
+DAVE,A,Dave Inc.  - Class A Common Stock,,378.99,201828707.12,52.69,True,29.60,True,27.46,True,2026-07-29
+DDS,A,"Dillard's, Inc. Common Stock",,589.15,69859463.92,45.55,True,28.18,True,15.00,True,2026-07-29
+DE,A,Deere & Company Common Stock,,610.95,726464945.61,37.25,True,0.93,False,28.89,True,2026-07-29
+DELL,A,Dell Technologies Inc. Class C Common Stock ,,369.64,3115473725.72,95.89,True,69.70,True,34.81,True,2026-07-29
+DJCO,A,Daily Journal Corp. (S.C.) - Common Stock,,599.80,22109533.48,57.71,True,23.04,True,10.49,False,2026-07-29
+DPZ,A,Domino's Pizza Inc - Common Stock,,360.00,341969174.88,48.90,True,36.75,True,10.56,False,2026-07-29
+DY,A,"Dycom Industries, Inc. Common Stock",,371.92,277916863.56,79.56,True,68.47,True,29.95,True,2026-07-29
+EG,A,"Everest Group, Ltd. Common Stock",,393.89,152616087.10,31.61,True,18.33,True,9.56,False,2026-07-29
+ELV,A,"Elevance Health, Inc. Common Stock",,375.98,667558320.27,26.26,True,3.33,False,9.75,False,2026-07-29
+EME,A,"EMCOR Group, Inc. Common Stock",,672.48,390453936.08,104.11,True,96.59,True,36.93,True,2026-07-29
+ESE,A,ESCO Technologies Inc. Common Stock,,300.07,89493115.76,36.49,True,31.34,True,15.62,True,2026-07-29
+ESLT,A,Elbit Systems Ltd. - Ordinary Shares,,769.10,67859299.35,64.04,True,39.50,True,49.49,True,2026-07-29
+ETN,A,"Eaton Corporation, PLC Ordinary Shares",,361.88,954165361.09,59.30,True,53.25,True,24.38,True,2026-07-29
+EVR,A,Evercore Inc. Class A Common Stock,,304.71,158828773.57,47.57,True,30.09,True,35.79,True,2026-07-29
+EXPE,A,"Expedia Group, Inc. - Common Stock",,304.27,421194248.16,61.28,True,46.66,True,18.43,True,2026-07-29
+FDX,A,FedEx Corporation Common Stock,,308.61,651201868.60,18.50,True,7.01,False,4.17,False,2026-07-29
+FFIV,A,"F5, Inc. - Common Stock",,386.95,273893305.16,47.07,True,1.13,False,16.51,True,2026-07-29
+FN,A,Fabrinet Ordinary Shares,,414.50,526577052.66,127.33,True,103.23,True,41.69,True,2026-07-29
+GD,A,General Dynamics Corporation Common Stock,,380.96,493257851.46,23.53,True,0.83,False,12.23,False,2026-07-29
+GE,A,GE Aerospace Common Stock,,350.63,1697566298.16,28.17,True,1.63,False,12.96,False,2026-07-29
+GOOG,A,Alphabet Inc. - Class C Capital Stock,,335.76,7935476899.09,27.09,True,17.42,True,7.48,False,2026-07-29
+GOOGL,A,Alphabet Inc. - Class A Common Stock,,336.71,11953138418.29,27.60,True,19.02,True,7.15,False,2026-07-29
+GPI,A,"Group 1 Automotive, Inc. Common Stock",,357.97,66607230.89,56.56,True,31.29,True,13.22,False,2026-07-29
+HCA,A,"HCA Healthcare, Inc. Common Stock",,408.18,677477013.20,51.31,True,31.68,True,28.57,True,2026-07-29
+HD,A,"Home Depot, Inc. (The) Common Stock",,338.27,1549882960.48,26.38,True,13.56,False,8.38,False,2026-07-29
+HEI,A,Heico Corporation Common Stock,,355.23,158396681.89,30.24,True,14.69,False,9.07,False,2026-07-29
+HLT,A,Hilton Worldwide Holdings Inc. Common Stock ,,321.72,829011912.87,22.11,True,1.54,False,8.42,False,2026-07-29
+HUBB,A,Hubbell Inc Common Stock,,460.96,301689177.99,44.82,True,27.42,True,22.70,True,2026-07-29
+HUM,A,Humana Inc. Common Stock,,365.41,599903122.34,43.80,True,29.09,True,23.30,True,2026-07-29
+IDXX,A,"IDEXX Laboratories, Inc. - Common Stock",,569.77,364155420.87,44.19,True,30.40,True,13.34,False,2026-07-29
+IESC,A,"IES Holdings, Inc. - Common Stock",,496.22,204819172.07,193.30,True,167.48,True,59.74,True,2026-07-29
+INTU,A,Intuit Inc. - Common Stock,,333.13,1393484458.80,58.00,True,51.60,True,20.14,True,2026-07-29
+ISRG,A,"Intuitive Surgical, Inc. - Common Stock",,353.10,1372993359.28,46.13,True,21.08,True,19.33,True,2026-07-29
+JLL,A,Jones Lang LaSalle Incorporated Common Stock,,340.00,130164217.14,34.81,True,20.62,True,9.93,False,2026-07-29
+JPM,A,JP Morgan Chase & Co. Common Stock,,344.71,3482475724.44,15.52,True,5.19,False,12.60,False,2026-07-29
+KAI,A,Kadant Inc Common Stock,,302.96,42752174.90,23.22,True,4.74,False,12.14,False,2026-07-29
+KNSL,A,"Kinsale Capital Group, Inc. Common Stock",,376.67,119783601.84,60.16,True,44.39,True,16.82,True,2026-07-29
+KRYS,A,"Krystal Biotech, Inc. - Common Stock",,363.28,191855875.82,42.99,True,35.78,True,16.63,True,2026-07-29
+LAD,A,"Lithia Motors, Inc. Common Stock",,427.48,114552271.11,110.39,True,93.46,True,69.17,True,2026-07-29
+LFUS,A,"Littelfuse, Inc. - Common Stock",,410.47,171361611.80,58.33,True,4.70,False,18.42,True,2026-07-29
+LH,A,Labcorp Holdings Inc. Common Stock,,307.15,207795246.22,29.27,True,16.13,True,13.06,False,2026-07-29
+LII,A,"Lennox International, Inc. Common Stock",,430.02,261540036.89,130.13,True,107.87,True,114.09,True,2026-07-29
+LIN,A,Linde plc - Ordinary Shares,,511.17,1148763549.73,19.90,True,4.85,False,5.96,False,2026-07-29
+LITE,A,Lumentum Holdings Inc. - Common Stock,,602.35,3816024004.01,302.16,True,231.29,True,70.65,True,2026-07-29
+LMT,A,Lockheed Martin Corporation Common Stock,,569.20,716313839.76,48.77,True,0.61,False,14.01,False,2026-07-29
+LPLA,A,LPL Financial Holdings Inc. - Common Stock,,337.78,273982669.86,23.68,True,14.46,False,10.68,False,2026-07-29
+MA,A,Mastercard Incorporated Common Stock,,563.32,1855887629.44,46.38,True,33.03,True,12.05,False,2026-07-29
+MAR,A,Marriott International - Class A Common Stock,,381.12,585334569.96,23.52,True,16.65,True,9.96,False,2026-07-29
+MCO,A,Moody's Corporation Common Stock,,483.24,496766710.47,22.85,True,11.00,False,14.46,False,2026-07-29
+MDB,A,"MongoDB, Inc. - Class A Common Stock",,321.10,496310682.40,41.07,True,21.96,True,11.49,False,2026-07-29
+MDGL,A,"Madrigal Pharmaceuticals, Inc. - Common Stock",,546.88,201118064.55,39.57,True,3.53,False,12.45,False,2026-07-29
+MEDP,A,"Medpace Holdings, Inc. - Common Stock",,584.93,210415325.35,109.59,True,20.89,True,18.40,True,2026-07-29
+META,A,"Meta Platforms, Inc. - Class A Common Stock",,585.61,11209486269.45,32.43,True,20.49,True,10.91,False,2026-07-29
+MLM,A,"Martin Marietta Materials, Inc. Common Stock",,569.66,364168392.50,48.03,True,22.79,True,14.01,False,2026-07-29
+MPC,A,Marathon Petroleum Corporation Common Stock,,308.72,637064890.37,18.37,True,3.55,False,6.30,False,2026-07-29
+MSCI,A,MSCI Inc. Common Stock,,582.92,465543383.91,41.07,True,30.41,True,20.24,True,2026-07-29
+MSFT,A,Microsoft Corporation - Common Stock,,390.54,15951606538.73,23.86,True,8.96,False,7.40,False,2026-07-29
+MSI,A,"Motorola Solutions, Inc. Common Stock",,434.20,423189873.91,39.81,True,27.18,True,16.51,True,2026-07-29
+MU,A,"Micron Technology, Inc. - Common Stock",,739.00,51176669504.22,273.89,True,251.21,True,81.53,True,2026-07-29
+MUSA,A,Murphy USA Inc. Common Stock,,616.23,175006506.43,42.16,True,6.52,False,14.47,False,2026-07-29
+MYRG,A,"MYR Group, Inc. - Common Stock",,322.06,138424288.02,99.22,True,85.34,True,28.28,True,2026-07-29
+NEU,A,NewMarket Corp Common Stock,,787.62,90024268.30,48.59,True,17.62,True,9.33,False,2026-07-29
+NOC,A,Northrop Grumman Corporation Common Stock,,535.05,553446159.54,39.06,True,1.57,False,14.17,False,2026-07-29
+NSC,A,Norfolk Southern Corporation Common Stock,,335.74,385950813.05,23.62,True,12.81,False,7.31,False,2026-07-29
+NVMI,A,Nova Ltd. - Ordinary Shares,,366.91,268855266.22,103.99,True,88.46,True,35.41,True,2026-07-29
+PANW,A,"Palo Alto Networks, Inc. - Common Stock",,314.15,2287361133.29,28.03,True,11.48,False,6.47,False,2026-07-29
+PRI,A,"Primerica, Inc. Common Stock",,323.43,59211611.74,20.55,True,15.25,True,6.93,False,2026-07-29
+PSA,A,Public Storage Common Stock,,329.44,374792529.82,26.49,True,14.43,False,7.47,False,2026-07-29
+PWR,A,"Quanta Services, Inc. Common Stock",,561.14,881704648.96,105.02,True,92.66,True,31.92,True,2026-07-29
+RACE,A,Ferrari N.V. Common Shares,,385.69,177452913.24,34.88,True,26.25,True,19.87,True,2026-07-29
+RBC,A,RBC Bearings Incorporated Common Stock,,550.27,150388985.25,56.08,True,45.04,True,26.10,True,2026-07-29
+RCL,A,Royal Caribbean Cruises Ltd. Common Stock,,323.58,802329540.00,50.23,True,40.17,True,17.46,True,2026-07-29
+REGN,A,"Regeneron Pharmaceuticals, Inc. - Common Stock",,695.42,588601993.57,64.80,True,43.51,True,28.01,True,2026-07-29
+RL,A,Ralph Lauren Corporation Common Stock,,375.68,244836488.46,21.10,True,3.99,False,6.36,False,2026-07-29
+RNR,A,RenaissanceRe Holdings Ltd. Common Stock,,332.61,118740151.71,22.76,True,15.20,True,11.69,False,2026-07-29
+ROK,A,"Rockwell Automation, Inc. Common Stock",,459.39,401477853.39,24.34,True,1.26,False,11.78,False,2026-07-29
+ROP,A,"Roper Technologies, Inc. - Common Stock",,408.07,399675067.09,56.09,True,52.95,True,17.15,True,2026-07-29
+RS,A,"Reliance, Inc. Common Stock",,403.62,158875229.59,29.16,True,8.25,False,12.46,False,2026-07-29
+SAIA,A,"Saia, Inc. - Common Stock",,394.44,170075939.16,43.29,True,32.11,True,15.55,True,2026-07-29
+SHW,A,Sherwin-Williams Company (The) Common Stock,,343.88,868997217.14,56.17,True,33.34,True,27.00,True,2026-07-29
+SITM,A,SiTime Corporation - Common Stock,,462.16,369258576.86,130.37,True,114.25,True,31.79,True,2026-07-29
+SNA,A,Snap-On Incorporated Common Stock,,414.83,161515661.18,28.49,True,19.42,True,11.89,False,2026-07-29
+SNPS,A,"Synopsys, Inc. - Common Stock",,373.69,888676060.26,33.24,True,0.17,False,15.52,True,2026-07-29
+SPGI,A,S&P Global Inc. Common Stock,,419.64,1020651197.56,36.99,True,0.36,False,15.47,True,2026-07-29
+SPOT,A,Spotify Technology S.A. Ordinary Shares,,524.01,810772478.03,66.58,True,55.02,True,16.84,True,2026-07-29
+STRL,A,"Sterling Infrastructure, Inc. - Common Stock",,494.24,648069722.58,245.26,True,223.10,True,96.54,True,2026-07-29
+STX,A,Seagate Technology Holdings PLC - Ordinary Shares (Ireland),,764.43,4948320903.11,237.50,True,148.93,True,69.69,True,2026-07-29
+SYK,A,Stryker Corporation Common Stock,,352.25,826294975.11,45.59,True,33.28,True,11.28,False,2026-07-29
+TDY,A,Teledyne Technologies Incorporated Common Stock,,631.35,263108190.37,40.40,True,19.87,True,18.32,True,2026-07-29
+TER,A,"Teradyne, Inc. - Common Stock",,319.41,1939525899.74,77.50,True,54.34,True,23.83,True,2026-07-29
+TLN,A,Talen Energy Corporation - Common Stock,,316.19,341759142.43,68.61,True,63.08,True,21.02,True,2026-07-29
+TMO,A,Thermo Fisher Scientific Inc Common Stock,,576.46,1209370632.62,32.65,True,4.14,False,16.88,True,2026-07-29
+TPL,A,Texas Pacific Land Corporation Common Stock,,389.41,147518646.50,50.29,True,36.14,True,22.82,True,2026-07-29
+TRV,A,"The Travelers Companies, Inc. Common Stock",,389.01,788717097.64,28.64,True,12.64,False,10.89,False,2026-07-29
+TSM,A,Taiwan Semiconductor Manufacturing Company Ltd.,,374.67,6600663414.80,48.12,True,40.91,True,17.64,True,2026-07-29
+TT,A,Trane Technologies plc,,446.80,606652275.49,44.23,True,32.91,True,23.23,True,2026-07-29
+TYL,A,"Tyler Technologies, Inc. Common Stock",,333.50,255373513.89,64.33,True,45.34,True,18.73,True,2026-07-29
+UI,A,Ubiquiti Inc. Common Stock,,522.87,56125594.48,23.63,True,6.49,False,13.91,False,2026-07-29
+ULTA,A,"Ulta Beauty, Inc. - Common Stock",,508.09,319298504.79,45.07,True,30.13,True,21.01,True,2026-07-29
+UNF,A,Unifirst Corporation Common Stock,,301.19,48135999.90,20.31,True,11.47,False,4.62,False,2026-07-29
+UNH,A,UnitedHealth Group Incorporated Common Stock (DE),,420.57,2572994682.69,19.14,True,2.99,False,11.15,False,2026-07-29
+UTHR,A,United Therapeutics Corporation - Common Stock,,524.70,273271991.74,20.14,True,4.83,False,4.31,False,2026-07-29
+V,A,Visa Inc.,,368.73,3125911431.62,25.47,True,17.13,True,6.79,False,2026-07-29
+VLO,A,Valero Energy Corporation Common Stock,,301.32,854632109.35,23.53,True,3.94,False,6.05,False,2026-07-29
+VMI,A,"Valmont Industries, Inc. Common Stock",,456.29,130953002.66,47.22,True,32.31,True,24.38,True,2026-07-29
+VRTX,A,Vertex Pharmaceuticals Incorporated - Common Stock,,483.33,890689552.93,28.61,True,10.24,False,11.39,False,2026-07-29
+WAT,A,Waters Corporation Common Stock,,379.48,339543975.25,24.20,True,2.93,False,12.70,False,2026-07-29
+WCC,A,"WESCO International, Inc. Common Stock",,309.36,247091436.00,30.21,True,21.30,True,21.31,True,2026-07-29
+WDC,A,Western Digital Corporation - Common Stock,,462.04,5682469227.68,154.26,True,96.26,True,38.50,True,2026-07-29
+WINA,A,Winmark Corporation - Common Stock,,334.24,18666680.80,20.75,True,1.43,False,12.27,False,2026-07-29
+WSO,A,"Watsco, Inc. Common Stock",,320.02,160807745.13,64.36,True,39.83,True,47.49,True,2026-07-29
+WST,A,"West Pharmaceutical Services, Inc. Common Stock",,337.46,309507748.25,60.73,True,18.02,True,27.28,True,2026-07-29
+WTS,A,"Watts Water Technologies, Inc. Class A Common Stock",,336.15,148667066.38,17.87,True,7.52,False,10.44,False,2026-07-29
+WTW,A,Willis Towers Watson Public Limited Company - Ordinary Shares,,315.93,173517088.37,36.43,True,27.56,True,13.52,False,2026-07-29
+WWD,A,"Woodward, Inc. - Common Stock",,385.42,328021058.73,43.17,True,26.52,True,25.13,True,2026-07-29
+AARD,B,"Aardvark Therapeutics, Inc. - Common Stock",,5.32,2372931.90,0.30,True,0.17,False,0.17,False,2026-07-29
+AAUC,B,Allied Gold Corporation Common Shares,,17.03,13738048.59,0.29,True,0.20,True,0.18,False,2026-07-29
+ABAT,B,American Battery Technology Company - Common Stock,,2.05,9605880.90,0.20,True,0.10,False,0.06,False,2026-07-29
+ABSI,B,Absci Corporation - Common Stock,,6.90,61382775.16,0.24,True,0.14,False,0.06,False,2026-07-29
+ABTC,B,American Bitcoin Corp. - Class A Common Stock,,5.19,12119971.00,0.27,True,0.15,False,0.07,False,2026-07-29
+ACDC,B,ProFrac Holding Corp. - Class A Common Stock,,3.61,7637421.02,0.48,True,0.21,True,0.07,False,2026-07-29
+ADAG,B,"Adagene Inc. - ADS, each representing 1.25 ordinary shares",,3.72,1263721.71,0.23,True,0.10,False,0.10,False,2026-07-29
+ADTN,B,"ADTRAN Holdings, Inc. - Common Stock",,8.33,24416039.43,0.30,True,0.18,False,0.08,False,2026-07-29
+ADVB,B,Advanced Biomed Inc. - Common Stock,,10.98,38759978.17,1.55,True,0.35,True,0.24,True,2026-07-29
+AESI,B,Atlas Energy Solutions Inc. Common Stock,,10.18,43716940.74,0.48,True,0.22,True,0.08,False,2026-07-29
+AEVA,B,"Aeva Technologies, Inc. - Common Stock",,13.99,41179469.62,0.26,True,0.13,False,0.08,False,2026-07-29
+AGEN,B,Agenus Inc. - Common Stock,,6.63,43763263.94,0.27,True,0.07,False,0.08,False,2026-07-29
+AGPU,B,Axe Compute Inc. - Common Stock,,7.02,3683944.77,0.24,True,0.05,False,0.07,False,2026-07-29
+AHMA,B,Ambitions Enterprise Management Co. L.L.C - Class A Ordinary Shares,,1.39,5126858.45,0.24,True,0.17,False,0.10,False,2026-07-29
+AIAI,B,AIAI Holdings Corporation - Class A common stock,,4.63,4519554.30,0.65,True,0.36,True,0.16,False,2026-07-29
+AIB,B,AIB Data Centers Inc. Common Stock,,1.56,2116945.85,0.30,True,0.13,False,0.17,False,2026-07-29
+AIBZ,B,Bitzero Holdings Inc. - Common Shares,,5.33,5107531.81,0.36,True,0.12,False,0.11,False,2026-07-29
+AIIO,B,Robo.ai Inc. - Class B Ordinary Shares,,2.92,9402350.58,0.23,True,0.02,False,0.14,False,2026-07-29
+AIRJ,B,AirJoule Technologies Corporation - Class A Common Stock,,4.02,6908052.04,0.21,True,0.10,False,0.07,False,2026-07-29
+AIRO,B,"AIRO Group Holdings, Inc. - Common Stock",,6.25,3068839.02,0.25,True,0.13,False,0.08,False,2026-07-29
+AISP,B,"Airship AI Holdings, Inc - Class A Common Stock",,1.71,1287240.22,0.23,True,0.16,False,0.11,False,2026-07-29
+AIXI,B,XIAO-I Corporation - American Depositary Shares,,1.19,4373361.97,0.55,True,0.01,False,0.13,False,2026-07-29
+ALAR,B,Alarum Technologies Ltd. - American Depositary Shares,,1.70,1178794.67,0.27,True,0.12,False,0.05,False,2026-07-29
+ALGS,B,"Aligos Therapeutics, Inc. - Common stock",,4.25,1325955.22,0.31,True,0.09,False,0.13,False,2026-07-29
+ALM,B,Almonty Industries Inc. - Common Shares,,10.95,92249677.69,0.35,True,0.23,True,0.10,False,2026-07-29
+ALMU,B,"Aeluma, Inc. - Common Stock",,15.06,10784110.14,0.23,True,0.06,False,0.11,False,2026-07-29
+ALOY,B,REalloys Inc. - Common Stock,,7.49,37058955.16,0.25,True,0.00,False,0.10,False,2026-07-29
+ALT,B,"Altimmune, Inc. - Common Stock",,2.92,14062249.73,0.20,True,0.03,False,0.07,False,2026-07-29
+ALTO,B,"Alto Ingredients, Inc. - Common Stock",,4.36,14132496.64,0.25,True,0.12,False,0.07,False,2026-07-29
+AMC,B,"AMC Entertainment Holdings, Inc. Class A Common Stock",,2.75,125019916.99,0.32,True,0.21,True,0.11,False,2026-07-29
+AMIX,B,"Autonomix Medical, Inc. - Common Stock",,4.57,13278354.36,1.97,True,0.31,True,0.66,True,2026-07-29
+AMPG,B,"Amplitech Group, Inc. - Common Stock",,4.61,21573188.49,0.47,True,0.27,True,0.15,False,2026-07-29
+AMPL,B,"Amplitude, Inc. - Class A Common Stock",,8.89,18967349.64,0.23,True,0.10,False,0.07,False,2026-07-29
+AMPX,B,"Amprius Technologies, Inc. Common Stock",,8.44,83463121.42,0.24,True,0.15,False,0.08,False,2026-07-29
+AMRC,B,"Ameresco, Inc. Class A Common Stock",,18.51,13455428.65,0.30,True,0.21,True,0.08,False,2026-07-29
+AMTX,B,"Aemetis, Inc - Common Stock",,1.41,2195374.86,0.36,True,0.24,True,0.09,False,2026-07-29
+ANGI,B,Angi Inc. - Class A Common Stock,,6.10,4505046.24,0.21,True,0.13,False,0.07,False,2026-07-29
+ANIK,B,Anika Therapeutics Inc. - Common Stock,,16.17,1113014.94,0.22,True,0.10,False,0.07,False,2026-07-29
+ANY,B,Sphere 3D Corp. - Common Shares,,2.06,1971822.75,0.48,True,0.17,False,0.13,False,2026-07-29
+ARLO,B,"Arlo Technologies, Inc. Common Stock",,14.51,16153020.92,0.20,True,0.16,False,0.08,False,2026-07-29
+ARMP,B,"Armata Pharmaceuticals, Inc. Common Stock",,4.57,1273947.72,0.26,True,0.12,False,0.11,False,2026-07-29
+ARQQ,B,Arqit Quantum Inc. - Ordinary Shares,,15.49,24380292.42,0.26,True,0.16,False,0.12,False,2026-07-29
+ARRY,B,"Array Technologies, Inc. - Common Stock",,4.81,42852233.72,0.22,True,0.14,False,0.07,False,2026-07-29
+ARTV,B,"Artiva Biotherapeutics, Inc. - Common Stock",,10.02,5125980.57,0.21,True,0.01,False,0.05,False,2026-07-29
+ARX,B,Accelerant Holdings Class A Common Shares,,12.40,31268711.99,0.23,True,0.10,False,0.16,False,2026-07-29
+ASAN,B,"Asana, Inc. Class A Common Stock",,8.51,41491228.72,0.34,True,0.30,True,0.13,False,2026-07-29
+ASPN,B,"Aspen Aerogels, Inc. Common Stock",,4.09,7061141.69,0.30,True,0.21,True,0.09,False,2026-07-29
+ASTC,B,Astrotech Corporation - Common Stock,,6.21,2680276.06,0.45,True,0.18,False,0.15,False,2026-07-29
+ASTI,B,"Ascent Solar Technologies, Inc - Common Stock",,2.79,2598442.81,0.22,True,0.11,False,0.06,False,2026-07-29
+ASYS,B,"Amtech Systems, Inc. - Common Stock",,13.65,8629661.11,0.29,True,0.21,True,0.08,False,2026-07-29
+ATEC,B,"Alphatec Holdings, Inc. - Common Stock",,9.65,25217558.02,0.20,True,0.18,False,0.07,False,2026-07-29
+ATOM,B,Atomera Incorporated - Common Stock,,4.47,5720265.65,0.33,True,0.20,True,0.08,False,2026-07-29
+ATPC,B,Agape ATP Corporation - Common Stock,,2.29,15990494.82,0.24,True,0.11,False,0.05,False,2026-07-29
+AUR,B,"Aurora Innovation, Inc.  - Class A Common Stock",,5.98,160289746.85,0.20,True,0.00,False,0.04,False,2026-07-29
+AVIR,B,"Atea Pharmaceuticals, Inc. - common stock",,4.62,1835612.92,0.29,True,0.03,False,0.06,False,2026-07-29
+AVTR,B,"Avantor, Inc. Common Stock",,14.38,122247578.34,0.32,True,0.27,True,0.16,False,2026-07-29
+BATL,B,Battalion Oil Corporation Common Stock,,1.52,27110700.16,0.48,True,0.12,False,0.19,False,2026-07-29
+BCAR,B,D. Boral ARC Acquisition I Corp. - Class A Ordinary Shares,,4.16,6230619.19,1.50,True,0.60,True,0.27,True,2026-07-29
+BESS,B,Bimergen Energy Corporation Common Stock,,2.55,1311729.73,0.26,True,0.17,False,0.15,False,2026-07-29
+BGDE,B,"Big Digital Energy, Inc. - Common Stock",,4.72,1074078.24,0.34,True,0.15,False,0.06,False,2026-07-29
+BIRD,B,"Smartbird, Inc. - Class A Common Stock",,2.21,15403743.41,0.27,True,0.14,False,0.07,False,2026-07-29
+BIYA,B,Baiya International Group Inc.  - Ordinary Shares,,5.83,44816886.06,2.57,True,1.18,True,1.16,True,2026-07-29
+BJDX,B,"Bluejay Diagnostics, Inc. - Common Stock",,0.88,7733086.64,0.40,True,0.23,True,0.12,False,2026-07-29
+BLDP,B,"Ballard Power Systems, Inc. - Common Shares",,2.50,23045404.43,0.29,True,0.16,False,0.07,False,2026-07-29
+BLZE,B,"Backblaze, Inc. - Common Stock",,11.38,56413699.86,0.24,True,0.11,False,0.09,False,2026-07-29
+BNAI,B,Brand Engagement Network Inc. - Common Stock,,11.62,4331672.59,0.28,True,0.09,False,0.09,False,2026-07-29
+BOBS,B,"Bob's Discount Furniture, Inc. Common Stock",,16.85,16628511.64,0.22,True,0.15,False,0.07,False,2026-07-29
+BOOM,B,DMC Global Inc. - Common Stock,,5.42,2254482.18,0.26,True,0.12,False,0.04,False,2026-07-29
+BRAI,B,Braiin Limited - Common Stock,,5.60,3284380.26,0.45,True,0.01,False,0.10,False,2026-07-29
+BRUN,B,Boost Run Inc. - Class A Common Stock,,15.64,46552607.18,0.60,True,0.35,True,0.14,False,2026-07-29
+BRUNW,B,Boost Run Inc. - Warrant,,4.31,2886694.11,2.33,True,0.66,True,0.34,True,2026-07-29
+BSIN,B,Big Sky Industrial Inc. - Common Stock,,1.12,2423179.26,0.37,True,0.18,False,0.07,False,2026-07-29
+BTBT,B,"Bit Digital, Inc. - Ordinary Share",,1.21,48420923.05,0.36,True,0.19,False,0.09,False,2026-07-29
+BTDR,B,Bitdeer Technologies Group - Ordinary Shares,,8.90,131280544.38,0.48,True,0.27,True,0.13,False,2026-07-29
+BW,B,"Babcock & Wilcox Enterprises, Inc. Common Stock",,7.94,50565921.66,0.40,True,0.28,True,0.13,False,2026-07-29
+BWAY,B,BrainsWay Ltd. - American Depositary Shares,,14.16,1836618.52,0.22,True,0.14,False,0.09,False,2026-07-29
+BWEN,B,"Broadwind, Inc. - Common Stock",,3.49,2364875.31,0.60,True,0.33,True,0.17,False,2026-07-29
+BYRN,B,"Byrna Technologies, Inc. - Common Stock",,4.33,4920778.51,0.44,True,0.28,True,0.17,False,2026-07-29
+CAMP,B,CAMP4 Therapeutics Corporation - Common Stock,,3.27,1265809.16,0.23,True,0.09,False,0.08,False,2026-07-29
+CAPR,B,"Capricor Therapeutics, Inc. - Common Stock",,6.57,48606659.00,2.63,True,0.65,True,0.64,True,2026-07-28
+CARL,B,"Carlsmed, Inc. - Common Stock",,12.78,1735406.17,0.22,True,0.16,False,0.08,False,2026-07-29
+CAST,B,"FreeCast, Inc. - Class A common stock",,1.20,43964851.13,0.99,True,0.42,True,0.29,True,2026-07-29
+CBIO,B,"Crescent Biopharma, Inc. - Common Stock",,14.77,7535045.74,0.23,True,0.13,False,0.10,False,2026-07-29
+CDXS,B,"Codexis, Inc. - Common Stock",,1.47,2628900.04,0.43,True,0.26,True,0.26,True,2026-07-29
+CEPL,B,"Capstone Energy Plus, Inc. - Common Stock",,7.12,3717738.01,0.61,True,0.30,True,0.14,False,2026-07-29
+CERT,B,"Certara, Inc. - Common Stock",,8.09,29234686.71,0.20,True,0.14,False,0.06,False,2026-07-29
+CETX,B,Cemtrex Inc. - Common Stock,,2.51,2931176.13,0.20,True,0.09,False,0.10,False,2026-07-29
+CHGG,B,"Chegg, Inc. Common Stock",,1.04,1311979.00,0.30,True,0.07,False,0.10,False,2026-07-29
+CHRN,B,ChronoScale Holdings Corporation - Common Stock,,18.52,8598527.68,0.55,True,0.18,False,0.08,False,2026-07-29
+CHSN,B,Chanson International Holding - Class A Ordinary Shares,,1.08,1809616.93,0.28,True,0.14,False,0.08,False,2026-07-29
+CIFR,B,Cipher Digital Inc. - Common Stock,,17.69,596538257.91,0.54,True,0.31,True,0.13,False,2026-07-29
+CIIT,B,"Tianci International, Inc. - Common Stock",,3.52,8308684.63,0.26,True,0.03,False,0.06,False,2026-07-29
+CLB,B,Core Laboratories Inc. Common Stock,,9.87,13051295.77,0.25,True,0.16,False,0.08,False,2026-07-29
+CLSK,B,"CleanSpark, Inc. - Common Stock",,12.01,324256650.79,0.36,True,0.23,True,0.11,False,2026-07-29
+CLVT,B,Clarivate Plc Ordinary Shares,,2.15,19220877.43,0.37,True,0.11,False,0.13,False,2026-07-29
+CLYM,B,"Climb Bio, Inc. - Common Stock",,12.11,17800479.62,0.23,True,0.05,False,0.04,False,2026-07-29
+CMRC,B,"Commerce.com, Inc. - Series 1 Common Stock",,3.30,1904856.92,0.29,True,0.27,True,0.13,False,2026-07-29
+CNXU,B,Conexeu Sciences Inc. - Common Stock,,7.89,1084293.30,0.33,True,0.14,False,0.10,False,2026-07-29
+CODX,B,"Co-Diagnostics, Inc. - Common Stock",,1.51,1559120.60,0.75,True,0.32,True,0.31,True,2026-07-29
+CORZ,B,"Core Scientific, Inc. - Common Stock",,18.12,295807446.35,0.37,True,0.24,True,0.13,False,2026-07-29
+CORZW,B,"Core Scientific, Inc. - Tranche 1 Warrants",,11.45,3327631.50,0.55,True,0.33,True,0.18,False,2026-07-29
+COUR,B,"Coursera, Inc. Common Stock",,6.18,40456522.67,0.22,True,0.15,False,0.06,False,2026-07-29
+CPHI,B,"China Pharma Holdings, Inc. Common Stock",,1.20,31299726.44,1.13,True,0.35,True,0.19,False,2026-07-29
+CPSH,B,CPS Technologies Corp. - Common Stock,,3.51,3216417.28,0.45,True,0.26,True,0.10,False,2026-07-29
+CRE,B,Cre8 Enterprise Limited - Class A Ordinary Shares,,2.42,4985770.02,0.23,True,0.09,False,0.05,False,2026-07-29
+CRML,B,Critical Metals Corp. - Ordinary Shares,,5.13,43519255.62,0.27,True,0.16,False,0.09,False,2026-07-29
+CRMT,B,"America's Car-Mart, Inc. - Common Stock",,3.11,9149586.49,0.26,True,0.15,False,0.16,False,2026-07-29
+CRNC,B,Cerence Inc. - Common Stock,,7.95,8012372.77,0.26,True,0.10,False,0.04,False,2026-07-29
+CSIQ,B,Canadian Solar Inc. - Common Shares,,13.72,36830373.26,0.23,True,0.07,False,0.09,False,2026-07-29
+CTNT,B,Cheetah Net Supply Chain Service Inc. - Class A Common Stock,,1.80,3070231.44,0.38,True,0.21,True,0.16,False,2026-07-29
+CUPR,B,Cuprina Holdings (Cayman) Limited - Class A Ordinary shares,,3.21,11360450.95,0.25,True,0.03,False,0.08,False,2026-07-29
+CXDO,B,"Crexendo, Inc. - Common Stock",,6.68,4011794.15,0.25,True,0.00,False,0.05,False,2026-07-29
+CXM,B,"Sprinklr, Inc. Class A Common Stock",,6.45,20098539.02,0.20,True,0.17,False,0.07,False,2026-07-29
+DBI,B,Designer Brands Inc. Class A Common Stock,,6.20,3813848.01,0.22,True,0.16,False,0.08,False,2026-07-29
+DCOY,B,Decoy Therapeutics Inc. - Common Stock,,4.03,4459269.10,0.53,True,0.18,False,0.26,True,2026-07-29
+DCX,B,Digital Currency X Technology Inc. - Class A Ordinary Shares,,1.08,1599853.46,0.89,True,0.52,True,0.24,True,2026-07-29
+DFDV,B,DeFi Development Corp. - Common Stock,,2.57,2350215.60,0.23,True,0.10,False,0.06,False,2026-07-29
+DGXX,B,Digi Power X Inc. - Common Subordinate Voting Shares,,3.30,24330086.20,0.38,True,0.24,True,0.10,False,2026-07-29
+DJT,B,Trump Media & Technology Group Corp. - Common Stock,,9.85,43068497.83,0.20,True,0.11,False,0.12,False,2026-07-29
+DMRC,B,Digimarc Corporation - Common Stock,,6.37,1405844.30,0.23,True,0.08,False,0.06,False,2026-07-29
+DNN,B,Denison Mines Corp Ordinary Shares (Canada),,2.69,76937333.75,0.20,True,0.13,False,0.06,False,2026-07-29
+DOMO,B,"Domo, Inc. - Class B Common Stock",,3.63,11460585.35,0.28,True,0.08,False,0.07,False,2026-07-29
+DRTS,B,Alpha Tau Medical Ltd. - Ordinary Shares,,11.18,9390232.30,0.23,True,0.16,False,0.06,False,2026-07-29
+DSC,B,DSC Holdings Ltd. - American Depositary Shares,,5.41,1043845.27,0.31,True,0.18,False,0.13,False,2026-07-29
+DSY,B,Big Tree Cloud Holdings Limited - Class A Ordinary Shares,,3.19,4077701.59,0.20,True,0.08,False,0.08,False,2026-07-29
+DWSN,B,Dawson Geophysical Company - Common Stock,,4.20,1310009.23,0.34,True,0.12,False,0.09,False,2026-07-29
+DXC,B,DXC Technology Company Common Stock ,,11.77,48799564.76,0.31,True,0.27,True,0.08,False,2026-07-29
+EAF,B,GrafTech International Ltd. Common Stock,,7.06,2968508.66,0.26,True,0.01,False,0.08,False,2026-07-29
+EDHL,B,Everbright Digital Holding Limited - Ordinary Shares,,3.85,1156428.23,0.32,True,0.05,False,0.16,False,2026-07-29
+EGG,B,Enigmatig Limited Class A Ordinary Shares,,3.92,3586369.28,3.45,True,0.39,True,0.86,True,2026-07-29
+EGHT,B,8x8 Inc - Common stock,,1.97,3743980.81,0.24,True,0.22,True,0.08,False,2026-07-29
+EHGO,B,Eshallgo Inc. - Class A Ordinary Shares,,2.08,48931383.42,1.70,True,0.23,True,0.23,True,2026-07-29
+ELMT,B,The Elmet Group Co. - Common Stock,,12.74,8868223.46,0.26,True,0.15,False,0.12,False,2026-07-29
+ELVA,B,Electrovaya Inc. - Common Shares,,7.67,16893697.41,0.21,True,0.11,False,0.05,False,2026-07-29
+EMPD,B,Empery Digital Inc. - Common stock,,3.01,1798526.68,0.23,True,0.12,False,0.05,False,2026-07-29
+ENHA,B,Enhanced Group Inc. Class A Common Stock,,2.65,2757128.47,0.35,True,0.21,True,0.13,False,2026-07-29
+ENTX,B,Entera Bio Ltd. - Ordinary Shares,,3.00,14676747.84,1.11,True,0.41,True,0.91,True,2026-07-29
+ENVX,B,Enovix Corporation - Common Stock,,3.68,30408663.89,0.27,True,0.15,False,0.09,False,2026-07-29
+EOSE,B,"Eos Energy Enterprises, Inc. - Common Stock",,3.14,135338041.31,0.27,True,0.16,False,0.07,False,2026-07-29
+EQ,B,"Equillium, Inc. - Common Stock",,2.28,2373461.80,0.31,True,0.15,False,0.07,False,2026-07-29
+ERNA,B,Ernexa Therapeutics Inc. - Common Stock,,3.41,6303022.97,0.33,True,0.15,False,0.08,False,2026-07-29
+EROC,B,"ERock, Inc. Class A Common Stock",,8.99,22548734.64,0.43,True,0.25,True,0.11,False,2026-07-29
+ESOA,B,Energy Services of America Corporation - Common Stock,,14.03,2360015.72,0.20,True,0.16,False,0.07,False,2026-07-29
+EVH,B,"Evolent Health, Inc Class A Common Stock",,3.30,15289290.21,0.65,True,0.29,True,0.12,False,2026-07-29
+EVTL,B,Vertical Aerospace Ltd. Ordinary Shares,,1.21,3748720.69,0.41,True,0.20,True,0.10,False,2026-07-29
+EXYN,B,"Exyn Technologies, Inc. - Common Stock",,2.32,1265073.30,0.47,True,0.24,True,0.14,False,2026-07-29
+EZGO,B,EZGO Technologies Ltd. - Ordinary Shares,,0.89,1222485.56,0.30,True,0.16,False,0.08,False,2026-07-29
+FAC,B,Factorial Energy Inc. - Class A Common Stock,,4.68,3003234.83,0.34,True,0.15,False,0.07,False,2026-07-29
+FCEL,B,"FuelCell Energy, Inc. - Common Stock",,18.08,321991166.43,0.40,True,0.22,True,0.09,False,2026-07-29
+FCUV,B,Focus Universal Inc. - Common Stock,,1.79,15451268.55,0.43,True,0.23,True,0.15,False,2026-07-29
+FGMC,B,FG Merger II Corp. - Common stock,,8.30,3239204.51,0.26,True,0.15,False,0.10,False,2026-07-17
+FIEE,B,"FiEE, Inc - Common Stock",,3.20,1537336.55,3.41,True,0.01,False,0.15,False,2026-07-29
+FIP,B,FTAI Infrastructure Inc. - Common Stock,,3.78,4399254.88,0.22,True,0.14,False,0.07,False,2026-07-29
+FIRY,B,Firy Inc. Class A Common Stock,,9.84,9205189.03,0.78,True,0.22,True,0.18,False,2026-07-29
+FISN,B,"Deep Fission, Inc. - Common Stock",,9.72,5108884.69,0.31,True,0.09,False,0.05,False,2026-07-29
+FLNC,B,"Fluence Energy, Inc. - Class A Common Stock",,11.89,148981526.99,0.27,True,0.18,False,0.07,False,2026-07-29
+FLY,B,Firefly Aerospace Inc. - Common Stock,,17.84,126205267.11,0.20,True,0.14,False,0.08,False,2026-07-29
+FLZH,B,"Flash Sports & Media Holdings, Inc. - Common Stock",,1.25,1364287.11,0.38,True,0.23,True,0.15,False,2026-07-29
+FMC,B,FMC Corporation Common Stock,,10.01,52525170.29,0.21,True,0.14,False,0.09,False,2026-07-29
+FORR,B,"Forrester Research, Inc. - Common Stock",,10.26,1607223.70,0.20,True,0.16,False,0.08,False,2026-07-29
+FRMI,B,Fermi Inc. - Common Stock,,5.86,153349829.57,0.30,True,0.07,False,0.17,False,2026-07-29
+FRSH,B,Freshworks Inc. - Class A Common Stock,,11.61,234097578.18,0.20,True,0.19,False,0.05,False,2026-07-29
+FRVO,B,Fervo Energy Company - Class A common stock,,17.08,87591774.69,0.71,True,0.35,True,0.19,False,2026-07-29
+FVRR,B,"Fiverr International Ltd. Ordinary Shares, no par value",,9.21,8270220.94,0.34,True,0.10,False,0.21,True,2026-07-29
+FXHO,B,UTime Limited - Class A Ordinary Shares,,8.77,9972978.99,0.69,True,0.29,True,0.15,False,2026-07-29
+GCTS,B,"GCT Semiconductor Holding, Inc. Common Stock",,1.74,6378889.96,0.24,True,0.15,False,0.07,False,2026-07-29
+GDYN,B,"Grid Dynamics Holdings, Inc. - Class A Common Stock",,6.80,13768439.82,0.27,True,0.21,True,0.11,False,2026-07-29
+GENI,B,Genius Sports Limited Ordinary Shares,,7.31,38690225.17,0.22,True,0.14,False,0.12,False,2026-07-29
+GEVO,B,"Gevo, Inc. - Common Stock",,1.45,5883565.89,0.31,True,0.21,True,0.11,False,2026-07-29
+GFUZ,B,General Fusion Group Ltd. - Common Shares,,8.04,10146553.95,0.53,True,0.16,False,0.14,False,2026-07-29
+GLND,B,Greenland Energy Company - Common Stock,,1.83,2249598.10,0.29,True,0.17,False,0.09,False,2026-07-29
+GLXY,B,Galaxy Digital Inc. - Class A common stock,,18.26,176143848.24,0.40,True,0.25,True,0.13,False,2026-07-29
+GMEX,B,GMEX ROBOTICS CORPORATION - Class A Ordinary Shares,,1.28,4189478.76,0.68,True,0.06,False,0.22,True,2026-07-29
+GMM,B,Global Mofy AI Limited  - Class A Ordinary Shares,,2.93,28005538.11,0.79,True,0.02,False,0.19,False,2026-07-29
+GMTL,B,Guardian Metal Resources PLC ADS,,9.27,2935604.14,0.32,True,0.17,False,0.11,False,2026-07-29
+GOAI,B,Eva Live Inc. - Common Stock,,1.93,1150806.74,0.30,True,0.02,False,0.04,False,2026-07-29
+GORO,B,Gold Resource Corporation Common Stock,,2.06,6777134.84,0.37,True,0.10,False,0.13,False,2026-07-29
+GRND,B,Grindr Inc. Common Stock,,17.21,26462989.44,0.22,True,0.17,False,0.07,False,2026-07-29
+GRRR,B,Gorilla Technology Group Inc. - Ordinary shares,,10.65,22653403.64,0.21,True,0.15,False,0.09,False,2026-07-29
+GSIT,B,"GSI Technology, Inc. - Common Stock",,5.25,6801833.33,0.20,True,0.13,False,0.07,False,2026-07-29
+GTE,B,Gran Tierra Energy Inc. Common Stock,,6.68,2007247.63,0.22,True,0.13,False,0.08,False,2026-07-29
+GTM,B,ZoomInfo Technologies Inc. - Common Stock,,3.50,30517263.45,0.28,True,0.22,True,0.07,False,2026-07-29
+GVH,B,Globavend Holdings Limited - Ord Shares,,0.91,4850801.70,0.23,True,0.09,False,0.09,False,2026-07-29
+HCKT,B,"The Hackett Group, Inc. - Common Stock",,11.17,3973701.05,0.24,True,0.20,True,0.06,False,2026-07-29
+HIMX,B,"Himax Technologies, Inc. - American depositary shares, each of which represents two ordinary shares.",,11.64,31160167.85,0.20,True,0.12,False,0.06,False,2026-07-29
+HIVE,B,HIVE Digital Technologies Ltd - Common Shares,,2.54,90050897.28,0.30,True,0.20,True,0.11,False,2026-07-29
+HKIT,B,Hitek Global Inc. - Class A Ordinary Share,,3.12,2132178.32,0.20,True,0.06,False,0.12,False,2026-07-29
+HLLY,B,Holley Inc. Common Stock,,2.78,2276508.42,0.20,True,0.10,False,0.05,False,2026-07-29
+HMH,B,HMH Holding Inc. - Common Stock,,18.66,6593754.44,0.20,True,0.12,False,0.08,False,2026-07-29
+HNRG,B,Hallador Energy Company - Common Stock,,13.70,13325337.89,0.21,True,0.15,False,0.06,False,2026-07-29
+HODO,B,House of Doge Inc. - Common Stock,,0.82,1119034.90,1.58,True,0.32,True,0.23,True,2026-07-29
+HOVR,B,New Horizon Aircraft Ltd. - Class A Ordinary Shares,,1.59,2338793.34,0.24,True,0.14,False,0.09,False,2026-07-29
+HPK,B,"HighPeak Energy, Inc. - Common Stock",,6.63,3899465.28,0.31,True,0.17,False,0.12,False,2026-07-29
+HQ,B,Horizon Quantum Holdings Ltd. - Class A Ordinary Shares,,11.55,26307150.02,0.36,True,0.16,False,0.15,False,2026-07-29
+HQWWW,B,Horizon Quantum Holdings Ltd. - Warrant,,4.01,1817682.53,0.79,True,0.27,True,0.33,True,2026-07-29
+HSCS,B,HeartSciences Inc. - Common Stock,,2.16,12962871.71,0.39,True,0.11,False,0.11,False,2026-07-29
+HTLD,B,"Heartland Express, Inc. - Common Stock",,12.99,9807608.88,0.20,True,0.12,False,0.04,False,2026-07-29
+HTZ,B,"Hertz Global Holdings, Inc - Common Stock",,1.67,61603554.17,0.30,True,0.12,False,0.12,False,2026-07-29
+HYLN,B,Hyliion Holdings Corp. Class A Common Stock,,3.24,20100540.38,0.42,True,0.21,True,0.10,False,2026-07-29
+HYPD,B,"Hyperion DeFi, Inc. - Common Stock",,2.34,1615068.24,0.21,True,0.11,False,0.05,False,2026-07-29
+IART,B,Integra LifeSciences Holdings Corporation - Common Stock,,16.49,18801823.88,0.28,True,0.11,False,0.17,False,2026-07-29
+ICCM,B,IceCure Medical Ltd. - Ordinary Shares,,2.88,44009041.84,0.23,True,0.11,False,0.06,False,2026-07-29
+IMMR,B,Immersion Corporation - Common Stock,,7.33,4979961.43,0.25,True,0.11,False,0.19,False,2026-07-29
+IMUX,B,"Immunic, Inc.  - Common Stock",,13.05,2531997.61,0.20,True,0.09,False,0.06,False,2026-07-29
+INDI,B,"indie Semiconductor, Inc. - Class A Common Stock",,3.01,22315074.08,0.27,True,0.17,False,0.07,False,2026-07-29
+INFY,B,Infosys Limited American Depositary Shares,,12.60,308532014.29,0.23,True,0.18,False,0.06,False,2026-07-29
+INLF,B,INLIF LIMITED - Class A Ordinary shares,,4.27,25391029.86,1.87,True,0.14,False,0.62,True,2026-07-29
+INM,B,InMed Pharmaceuticals Inc. - Common Shares,,1.67,3066928.46,0.22,True,0.10,False,0.08,False,2026-07-29
+INSG,B,Inseego Corp. - Common Stock,,6.36,2173262.72,0.20,True,0.10,False,0.07,False,2026-07-29
+INTT,B,inTest Corporation Common Stock,,11.42,3604110.66,0.34,True,0.22,True,0.10,False,2026-07-29
+INV,B,"Innventure, Inc. - Common Stock",,2.82,8424526.90,0.23,True,0.05,False,0.05,False,2026-07-29
+IPWR,B,Ideal Power Inc. - Common Stock,,3.35,1157304.72,0.27,True,0.18,False,0.11,False,2026-07-29
+IRD,B,"Opus Genetics, Inc. - Common Stock",,3.47,4154992.11,0.25,True,0.19,False,0.09,False,2026-07-29
+ITG,B,"ITG, Inc. - Class A Common Stock",,11.98,11776773.26,0.23,True,0.13,False,0.07,False,2026-07-29
+JACK,B,Jack In The Box Inc. - Common Stock,,16.47,17068966.64,0.29,True,0.20,True,0.08,False,2026-07-29
+JBLU,B,JetBlue Airways Corporation - Common Stock,,5.72,196889606.96,0.30,True,0.15,False,0.10,False,2026-07-29
+JELD,B,"JELD-WEN Holding, Inc. Common Stock",,1.28,2580152.64,0.27,True,0.16,False,0.12,False,2026-07-29
+JEM,B,707 Cayman Holdings Limited - Ordinary Shares,,5.41,35578077.56,0.78,True,0.14,False,0.34,True,2026-07-29
+JFB,B,JFB Construction Holdings - Class A Common Stock,,3.29,1396590.08,0.25,True,0.13,False,0.08,False,2026-07-29
+JLHL,B,Julong Holding Limited - Class A Ordinary Shares,,5.75,50093034.98,0.35,True,0.07,False,0.05,False,2026-07-29
+JTAI,B,Jet.AI Inc. - Common Stock,,1.83,5388938.58,0.48,True,0.13,False,0.09,False,2026-07-29
+JZXN,B,"Jiuzi Holdings, Inc. - Ordinary Shares",,1.27,13963952.31,0.42,True,0.02,False,0.13,False,2026-07-29
+KD,B,"Kyndryl Holdings, Inc. Common Stock",,14.01,53029637.97,0.24,True,0.20,True,0.06,False,2026-07-29
+KEEL,B,Keel Infrastructure Corp. - Common Stock,,3.18,234600668.95,0.59,True,0.34,True,0.15,False,2026-07-29
+KLC,B,"KinderCare Learning Companies, Inc. Common Stock",,5.45,3110400.95,0.20,True,0.13,False,0.04,False,2026-07-29
+KLRS,B,"Kalaris Therapeutics, Inc.  - Common Stock",,3.40,2019778.88,0.30,True,0.13,False,0.07,False,2026-07-29
+KOPN,B,Kopin Corporation - Common Stock,,3.16,22173751.66,0.22,True,0.17,False,0.10,False,2026-07-29
+KOS,B,Kosmos Energy Ltd. Common Shares (DE),,2.48,40090434.54,0.21,True,0.09,False,0.07,False,2026-07-29
+KRO,B,Kronos Worldwide Inc Common Stock,,6.19,2416903.91,0.20,True,0.07,False,0.07,False,2026-07-29
+KSCP,B,"Knightscope, Inc. - Class A Common Stock",,1.38,2789260.30,0.48,True,0.19,False,0.15,False,2026-07-29
+KULR,B,"KULR Technology Group, Inc. Common Stock",,2.42,5752105.98,0.30,True,0.13,False,0.09,False,2026-07-29
+KURA,B,"Kura Oncology, Inc. - Common Stock",,8.93,16840768.75,0.22,True,0.15,False,0.08,False,2026-07-29
+KUST,B,"Kustom Entertainment, Inc. - Common Stock",,1.08,14736777.71,0.55,True,0.22,True,0.15,False,2026-07-29
+KVYO,B,"Klaviyo, Inc. Series A Common Stock",,19.37,82326993.21,0.28,True,0.24,True,0.08,False,2026-07-29
+KZIA,B,Kazia Therapeutics Limited - American Depositary Shares,,12.03,2358084.59,0.28,True,0.08,False,0.06,False,2026-07-29
+LABT,B,Lakewood-Amedex Biotherapeutics Inc. - Common Stock,,1.98,10077393.54,0.97,True,0.35,True,0.16,False,2026-07-29
+LASE,B,Laser Photonics Corporation - Common Stock,,0.97,7990031.20,0.20,True,0.13,False,0.07,False,2026-07-29
+LBRT,B,Liberty Energy Inc. Class A common stock,,17.09,114127250.31,0.64,True,0.13,False,0.12,False,2026-07-29
+LCID,B,"Lucid Group, Inc. - Common Stock",,7.96,136708803.57,0.39,True,0.23,True,0.22,True,2026-07-29
+LEGN,B,Legend Biotech Corporation - American Depositary Shares,,18.85,69707274.07,0.29,True,0.20,True,0.13,False,2026-07-29
+LENZ,B,"LENZ Therapeutics, Inc. - Common Stock",,5.72,5802348.38,0.23,True,0.13,False,0.09,False,2026-07-29
+LESL,B,"Leslie's, Inc. - Common Stock",,0.89,3977031.10,1.04,True,0.33,True,0.15,False,2026-07-29
+LGCL,B,Lucas GC Limited - Class A Ordinary Shares,,1.40,12069639.23,0.75,True,0.20,True,0.23,True,2026-07-29
+LGHL,B,Lion Group Holding Ltd. - American Depositary Share,,1.08,7126988.44,1.35,True,0.13,False,0.27,True,2026-07-29
+LGPS,B,LogProstyle Inc. Common Shares,,1.02,4927543.70,0.21,True,0.14,False,0.07,False,2026-07-29
+LHSW,B,Lianhe Sowell International Group Ltd - Class A Ordinary Shares,,2.61,25022546.41,0.33,True,0.02,False,0.19,False,2026-07-29
+LICN,B,Lichen International Limited - Class A Ordinary Shares,,1.12,1973870.50,0.54,True,0.06,False,0.08,False,2026-07-29
+LIDR,B,"AEye, Inc. - Class A Common Stock",,1.02,1260479.44,0.28,True,0.14,False,0.05,False,2026-07-29
+LNAI,B,Lunai Bioworks Inc. - Common Stock,,2.11,5860416.03,0.34,True,0.09,False,0.06,False,2026-07-29
+LNKS,B,Linkers Industries Limited - Class A Ordinary Shares,,1.06,7126639.46,0.32,True,0.21,True,0.09,False,2026-07-29
+LODE,B,Comstock Inc. Common Stock,,2.72,6845762.37,0.49,True,0.30,True,0.23,True,2026-07-29
+LPL,B,"LG Display Co, Ltd AMERICAN DEPOSITORY SHARES",,2.79,11567256.43,0.27,True,0.17,False,0.07,False,2026-07-29
+LPTH,B,"LightPath Technologies, Inc. - Class A Common Stock",,9.39,40570802.95,0.39,True,0.24,True,0.12,False,2026-07-29
+LU,B,"Lufax Holding Ltd American Depositary Shares, each representing two (2) Ordinary Shares",,1.53,1281790.08,0.20,True,0.13,False,0.06,False,2026-07-29
+LUNR,B,"Intuitive Machines, Inc. - Class A Common Stock",,11.39,191086577.28,0.26,True,0.17,False,0.08,False,2026-07-29
+LVWR,B,"LiveWire Group, Inc. Common Stock",,2.59,14698419.39,3.64,True,2.36,True,0.90,True,2026-07-29
+LWLG,B,"Lightwave Logic, Inc. - Common Stock",,5.35,32869531.24,0.29,True,0.20,True,0.09,False,2026-07-29
+LZ,B,"LegalZoom.com, Inc. - Common Stock",,8.42,18263951.69,0.22,True,0.19,False,0.07,False,2026-07-29
+MAAS,B,Maase Inc. - Class A Ordinary Shares,,18.36,2700341.46,0.24,True,0.10,False,0.07,False,2026-07-29
+MARA,B,"MARA Holdings, Inc. - Common Stock",,10.05,626401324.61,0.31,True,0.21,True,0.12,False,2026-07-29
+MBLY,B,Mobileye Global Inc. - Class A Common Stock,,8.01,72584964.66,0.25,True,0.07,False,0.08,False,2026-07-29
+MBRX,B,"Moleculin Biotech, Inc. - Common Stock",,1.36,2280472.16,0.70,True,0.35,True,0.38,True,2026-07-29
+MCRP,B,Micropolis AI Robotics Ordinary Shares,,1.25,1628515.13,0.25,True,0.02,False,0.05,False,2026-07-29
+MEI,B,"Methode Electronics, Inc. Common Stock",,12.92,14616368.21,0.31,True,0.19,False,0.13,False,2026-07-29
+METC,B,"Ramaco Resources, Inc. - Class A Common Stock",,9.63,19012242.64,0.38,True,0.14,False,0.08,False,2026-07-29
+MGNX,B,"MacroGenics, Inc. - Common Stock",,3.67,5507691.41,0.28,True,0.08,False,0.08,False,2026-07-29
+MH,B,"McGraw Hill, Inc. Common Stock",,11.20,9591943.61,0.28,True,0.17,False,0.06,False,2026-07-29
+MIMI,B,Mint Incorporation Limited - Class A Ordinary Shares,,1.58,10454625.16,0.39,True,0.27,True,0.10,False,2026-07-29
+MIR,B,"Mirion Technologies, Inc. Class A Common Stock",,14.57,75713434.18,0.25,True,0.14,False,0.13,False,2026-07-29
+MIST,B,Milestone Pharmaceuticals Inc. - Common Shares,,1.04,1651081.46,0.20,True,0.13,False,0.05,False,2026-07-29
+MNRO,B,"Monro, Inc.  - Common Stock",,13.26,17157990.94,0.32,True,0.21,True,0.23,True,2026-07-29
+MNTN,B,"MNTN, Inc. Class A Common Stock",,9.56,13050168.72,0.20,True,0.14,False,0.09,False,2026-07-29
+MNTS,B,Momentus Inc. - Class A Common Stock,,4.16,13821564.84,0.21,True,0.15,False,0.08,False,2026-07-29
+MPLT,B,"MapLight Therapeutics, Inc. - Common Stock",,15.02,25056383.87,3.06,True,0.57,True,0.73,True,2026-07-29
+MRAM,B,"Everspin Technologies, Inc. - Common Stock",,12.93,31824256.50,0.33,True,0.22,True,0.09,False,2026-07-29
+MRDN,B,Meridian Holdings Inc. - Common Stock,,11.01,1013986.55,0.41,True,0.09,False,0.22,True,2026-07-29
+MRLN,B,"Merlin, Inc. - Common Stock",,3.31,10256753.04,0.20,True,0.06,False,0.08,False,2026-07-29
+MTEN,B,Mingteng International Corporation Inc. - Class A Ordinary Shares,,0.95,2707166.74,0.52,True,0.21,True,0.13,False,2026-07-29
+MWC,B,"Micware Co., Ltd. - American Depositary Shares",,1.63,1004194.47,0.30,True,0.09,False,0.06,False,2026-07-29
+MX,B,Magnachip Semiconductor Corporation Common Stock,,3.01,5615798.46,0.28,True,0.18,False,0.07,False,2026-07-29
+NABL,B,"N-able, Inc. Common Stock",,4.48,8289916.04,0.20,True,0.15,False,0.07,False,2026-07-29
+NAK,B,"Northern Dynasty Minerals, Ltd. Common Stock",,1.38,11648111.64,0.28,True,0.19,False,0.08,False,2026-07-29
+NAKA,B,Nakamoto Inc. - Common Stock,,4.28,1016021.36,0.26,True,0.14,False,0.05,False,2026-07-29
+NAUT,B,"Nautilus Biotechnology, Inc. - Common Stock",,1.04,1973120.76,0.75,True,0.41,True,0.28,True,2026-07-29
+NCT,B,Intercont (Cayman) Limited - Class A Ordinary shares,,3.47,1430227.76,0.38,True,0.13,False,0.11,False,2026-07-29
+NEO,B,"NeoGenomics, Inc. - Common Stock",,15.27,51649287.22,0.23,True,0.07,False,0.14,False,2026-07-29
+NEOV,B,NeoVolta Inc. - Common Stock,,1.97,9166877.18,0.23,True,0.12,False,0.08,False,2026-07-29
+NEXT,B,NextDecade Corporation - Common Stock,,6.34,22601314.83,0.34,True,0.20,True,0.12,False,2026-07-29
+NINE,B,"Nine Energy Service, Inc. Common Stock",,11.15,1066215.28,0.20,True,0.09,False,0.06,False,2026-07-29
+NIVF,B,NewGenIvf Group Limited - Class A Ordinary Shares,,0.85,4878525.03,0.59,True,0.30,True,0.11,False,2026-07-29
+NMAD,B,"Nomad Power Solutions, Inc. - Common Stock",,4.02,2118461.64,0.30,True,0.17,False,0.09,False,2026-07-29
+NNBR,B,"NN, Inc. - Common Stock",,3.08,18990518.87,0.23,True,0.10,False,0.09,False,2026-07-29
+NNOX,B,NANO-X IMAGING LTD - Ordinary Shares,,0.88,3367254.01,0.20,True,0.10,False,0.08,False,2026-07-29
+NOK,B,Nokia Corporation Sponsored American Depositary Shares,,8.41,1140573428.32,0.24,True,0.14,False,0.06,False,2026-07-29
+NPKI,B,NPK International Inc. Common Stock,,12.05,16450789.01,0.26,True,0.17,False,0.08,False,2026-07-29
+NRC,B,NRC Health - Common Stock,,18.30,2122863.03,0.32,True,0.12,False,0.18,False,2026-07-29
+NRGV,B,"Energy Vault Holdings, Inc. Common Stock",,2.51,21367839.51,0.40,True,0.23,True,0.11,False,2026-07-29
+NRXP,B,"NRX Pharmaceuticals, Inc. - Common Stock",,3.23,3417295.25,0.37,True,0.21,True,0.09,False,2026-07-29
+NUAI,B,"New Era Energy & Digital, Inc. - Common Stock",,4.07,48402477.11,0.48,True,0.24,True,0.10,False,2026-07-29
+NUCL,B,Eagle Nuclear Energy Corp. - Common stock,,5.62,4239229.33,0.29,True,0.06,False,0.10,False,2026-07-29
+NUWE,B,"Nuwellis, Inc. - Common Stock",,1.89,1241958.68,0.44,True,0.14,False,0.07,False,2026-07-29
+NVA,B,Nova Minerals Corp Common Stock,,4.38,1921134.60,0.20,True,0.07,False,0.06,False,2026-07-29
+NVCR,B,NovoCure Limited - Ordinary Shares,,15.20,31938267.55,0.42,True,0.24,True,0.12,False,2026-07-29
+NVTS,B,Navitas Semiconductor Corporation - Common Stock,,9.74,288453618.45,0.36,True,0.19,False,0.12,False,2026-07-29
+NXTC,B,"NextCure, Inc. - Common Stock",,5.02,27119329.04,0.44,True,0.20,True,0.21,True,2026-07-29
+NXTS,B,Nexentis Technologies Inc. - Common Stock,,1.48,30143114.39,0.40,True,0.23,True,0.07,False,2026-07-29
+OCC,B,Optical Cable Corporation - Common Stock,,12.80,5807463.37,0.32,True,0.19,False,0.09,False,2026-07-29
+OI,B,"O-I Glass, Inc. Common Stock",,7.70,32767733.94,0.34,True,0.14,False,0.15,False,2026-07-29
+OM,B,"Outset Medical, Inc. - Common Stock",,4.66,1169986.23,0.20,True,0.10,False,0.09,False,2026-07-29
+OMER,B,Omeros Corporation - Common Stock,,11.67,18679935.89,0.24,True,0.14,False,0.16,False,2026-07-29
+ONDS,B,Ondas Inc - Common Stock,,6.80,725533196.47,0.22,True,0.14,False,0.13,False,2026-07-29
+OPK,B,"Opko Health, Inc. - Common Stock",,1.37,6270804.22,0.48,True,0.17,False,0.33,True,2026-07-29
+OPTX,B,"Syntec Optics Holdings, Inc. - Class A Common Stock",,5.88,7187543.09,0.43,True,0.22,True,0.11,False,2026-07-29
+ORIC,B,"Oric Pharmaceuticals, Inc. - Common Stock",,11.28,17980193.58,0.20,True,0.04,False,0.11,False,2026-07-29
+ORN,B,"Orion Group Holdings, Inc. Common",,9.08,8381644.57,0.53,True,0.30,True,0.24,True,2026-07-29
+OSS,B,"One Stop Systems, Inc. - Common Stock",,10.87,19000285.37,0.28,True,0.18,False,0.07,False,2026-07-29
+OTLK,B,"Outlook Therapeutics, Inc. - Common Stock",,1.00,21699335.69,1.13,True,0.24,True,0.24,True,2026-07-29
+OTLY,B,Oatly Group AB - American Depositary Shares,,15.26,1914695.94,0.51,True,0.21,True,0.07,False,2026-07-29
+PACK,B,Ranpak Holdings Corp Class A Common Stock,,5.84,3789798.47,0.20,True,0.07,False,0.09,False,2026-07-29
+PAR,B,PAR Technology Corporation Common Stock,,17.36,17392162.41,0.21,True,0.12,False,0.07,False,2026-07-29
+PATH,B,"UiPath, Inc. Class A Common Stock",,12.59,860997391.64,0.26,True,0.23,True,0.07,False,2026-07-29
+PAVS,B,Paranovus Entertainment Technology Ltd. - Class A Ordinary Shares,,4.81,7775130.04,1.46,True,0.19,False,0.18,False,2026-07-29
+PCLA,B,PicoCELA Inc. - American Depositary Shares,,4.93,3006229.59,0.62,True,0.05,False,0.17,False,2026-07-29
+PD,B,"PagerDuty, Inc. Common Stock",,10.76,18111702.21,0.27,True,0.25,True,0.07,False,2026-07-29
+PEPG,B,PepGen Inc. - Common Stock,,1.71,2085147.62,0.28,True,0.19,False,0.08,False,2026-07-29
+PLBL,B,Polibeli Group Ltd - Class A Ordinary Shares,,5.58,2899434.70,0.40,True,0.28,True,0.17,False,2026-07-29
+PLUG,B,"Plug Power, Inc. - Common Stock",,1.90,124684737.18,0.23,True,0.13,False,0.05,False,2026-07-29
+PMAX,B,Powell Max Limited - Class A Ordinary Shares,,1.53,1586650.00,0.25,True,0.14,False,0.10,False,2026-07-29
+PMN,B,ProMIS Neurosciences Inc. - Common Shares,,14.06,2046103.85,0.53,True,0.11,False,0.24,True,2026-07-29
+PN,B,PN Smart Energy Limited - Class A Ordinary Shares,,10.72,4753119.39,0.66,True,0.14,False,0.27,True,2026-07-29
+POET,B,POET Technologies Inc. - Common Shares,,6.37,140118440.86,0.26,True,0.16,False,0.09,False,2026-07-29
+PPCB,B,"Propanc Biopharma, Inc. - Common Stock",,0.99,3728405.45,0.61,True,0.32,True,0.18,False,2026-07-29
+PPHC,B,"Public Policy Holding Company, Inc. - Common Stock",,10.56,1107971.77,0.34,True,0.20,True,0.06,False,2026-07-29
+PRE,B,Prenetics Global Limited - Class A Ordinary Share,,18.02,4145714.96,0.24,True,0.07,False,0.04,False,2026-07-29
+PRFX,B,PRF Technologies Ltd. - Ordinary Shares,,0.99,1278987.72,0.32,True,0.14,False,0.07,False,2026-07-29
+PRLD,B,Prelude Therapeutics Incorporated - Common Stock,,4.71,2390125.30,0.32,True,0.20,True,0.19,False,2026-07-29
+PSFE,B,Paysafe Limited Common Shares,,8.64,2129033.42,0.20,True,0.11,False,0.08,False,2026-07-29
+PTEN,B,"Patterson-UTI Energy, Inc. - Common Stock",,9.33,95902532.89,0.22,True,0.10,False,0.08,False,2026-07-29
+PUMP,B,ProPetro Holding Corp. Common Stock,,10.21,61892522.54,0.39,True,0.17,False,0.09,False,2026-07-29
+PUSA,B,Aureus Greenway Holdings Inc. - Common Stock,,2.79,1636526.17,0.31,True,0.15,False,0.13,False,2026-07-29
+PYXS,B,"Pyxis Oncology, Inc. - Common Stock",,2.92,3610786.02,0.24,True,0.09,False,0.11,False,2026-07-29
+QBTS,B,D-Wave Quantum Inc. Common Shares,,16.18,474678209.08,0.22,True,0.05,False,0.20,True,2026-07-29
+QH,B,Quhuo Limited - American Depository Shares,,4.16,1133512.18,0.38,True,0.10,False,0.16,False,2026-07-29
+QMCO,B,Quantum Corporation - Common Stock,,10.45,11428036.56,0.30,True,0.10,False,0.07,False,2026-07-29
+QNC,B,Quantum eMotion Corp. Common Shares,,1.94,8399781.21,0.21,True,0.10,False,0.08,False,2026-07-29
+QS,B,QuantumScape Corporation - Common Stock,,4.96,186032923.74,0.20,True,0.03,False,0.06,False,2026-07-29
+QTEX,B,QTREX Quantum Ltd. - Ordinary Shares,,0.85,11523180.76,0.25,True,0.04,False,0.08,False,2026-07-29
+QTRX,B,Quanterix Corporation - Common Stock,,3.38,3418628.91,0.21,True,0.14,False,0.06,False,2026-07-29
+QUAD,B,"Quad Graphics, Inc Class A Common Stock",,9.29,1790507.56,0.22,True,0.12,False,0.10,False,2026-07-29
+QUIK,B,QuickLogic Corporation - Common Stock,,11.90,7421395.34,0.20,True,0.11,False,0.05,False,2026-07-29
+RCAT,B,"Red Cat Holdings, Inc. - Common Stock",,6.77,91946396.69,0.21,True,0.16,False,0.09,False,2026-07-29
+RDW,B,Redwire Corporation Common Stock,,7.78,243632812.09,0.22,True,0.16,False,0.09,False,2026-07-29
+REA,B,"Rare Earths Americas, Inc. Common Stock",,9.08,2025847.03,0.30,True,0.20,True,0.07,False,2026-07-29
+REI,B,"Ring Energy, Inc. Common Stock",,1.21,6640014.28,0.20,True,0.08,False,0.08,False,2026-07-29
+RELL,B,"Richardson Electronics, Ltd. - Common Stock",,16.69,4721371.85,0.40,True,0.24,True,0.18,False,2026-07-29
+REPL,B,"Replimune Group, Inc. - Common Stock",,5.41,40683597.96,1.30,True,0.48,True,0.38,True,2026-07-29
+RES,B,"RPC, Inc. Common Stock",,5.12,10252313.25,0.22,True,0.13,False,0.06,False,2026-07-29
+RFIL,B,"RF Industries, Ltd. - Common Stock",,10.66,6570787.64,0.26,True,0.18,False,0.07,False,2026-07-29
+RGNT,B,Regentis Biomaterials Ltd. Ordinary Shares,,1.78,3455987.02,0.27,True,0.09,False,0.14,False,2026-07-29
+RGTI,B,"Rigetti Computing, Inc.  - Common stock",,13.22,449675356.22,0.23,True,0.11,False,0.11,False,2026-07-29
+RIOT,B,"Riot Platforms, Inc. - Common Stock",,18.24,395285738.97,0.39,True,0.24,True,0.14,False,2026-07-29
+RPAY,B,Repay Holdings Corporation - Class A Common Stock,,4.04,2575111.13,0.21,True,0.12,False,0.06,False,2026-07-29
+RPGL,B,Republic Power Group Limited - Class A Ordinary Shares,,1.94,2500695.90,0.29,True,0.09,False,0.12,False,2026-07-29
+RTB,B,"RTB Digital, Inc. - Common Stock",,16.87,3030074.42,0.47,True,0.10,False,0.11,False,2026-07-29
+RUBI,B,Rubico Inc. - Common Stock,,2.17,5130917.50,0.40,True,0.08,False,0.06,False,2026-07-29
+RXST,B,"RxSight, Inc. - Common Stock",,6.13,7318106.42,0.23,True,0.14,False,0.09,False,2026-07-29
+RYOJ,B,"rYojbaba Co., Ltd. - Common Shares",,4.55,1292735.21,0.40,True,0.11,False,0.31,True,2026-07-29
+SECZ,B,Securitize Corp. Common Stock,,6.60,12642556.25,0.24,True,0.10,False,0.08,False,2026-07-29
+SEER,B,"Seer, Inc. - Class A Common Stock",,2.08,3922205.07,0.20,True,0.01,False,0.09,False,2026-07-29
+SERV,B,Serve Robotics Inc. - Common Stock,,4.37,22916112.71,0.23,True,0.13,False,0.07,False,2026-07-29
+SFIX,B,"Stitch Fix, Inc. - Class A Common Stock",,4.25,7642940.31,0.26,True,0.20,True,0.12,False,2026-07-29
+SGHT,B,"Sight Sciences, Inc. - Common Stock",,5.34,1043359.73,0.27,True,0.14,False,0.04,False,2026-07-29
+SHLS,B,"Shoals Technologies Group, Inc. - Class A Common Stock",,7.94,57391841.66,0.35,True,0.20,True,0.09,False,2026-07-29
+SHMD,B,SCHMID Group N.V. - Class A Ordinary Shares,,3.62,4129300.43,0.25,True,0.17,False,0.10,False,2026-07-29
+SIDU,B,"Sidus Space, Inc. - Class A Common Stock",,1.68,21065138.40,0.23,True,0.15,False,0.06,False,2026-07-29
+SIND,B,Sinda Ltd. Common Stock,,12.50,2739873.16,0.50,True,0.13,False,0.09,False,2026-07-29
+SKYQ,B,Sky Quarry Inc. - Common Stock,,4.51,61938427.37,1.10,True,0.20,True,0.23,True,2026-07-29
+SKYX,B,SKYX Platforms Corp. - Common Stock,,1.06,1818182.37,0.23,True,0.07,False,0.08,False,2026-07-29
+SLBT,B,SL Science Holding Limited - Ordinary Shares,,2.60,11064994.85,0.28,True,0.18,False,0.12,False,2026-07-29
+SLI,B,Standard Lithium Ltd. Common Shares,,1.93,5044338.36,0.21,True,0.11,False,0.05,False,2026-07-29
+SLNH,B,"Soluna Holdings, Inc. - Common Stock",,1.14,22259651.36,0.21,True,0.14,False,0.07,False,2026-07-29
+SLS,B,"SELLAS Life Sciences Group, Inc.  - Common Stock",,10.10,126010561.01,0.41,True,0.18,False,0.08,False,2026-07-29
+SMMT,B,Summit Therapeutics Inc.  - Common Stock,,12.80,65324908.21,0.24,True,0.15,False,0.09,False,2026-07-29
+SMWB,B,Similarweb Ltd. Ordinary Shares,,7.16,6340766.06,0.24,True,0.18,False,0.09,False,2026-07-29
+SND,B,"Smart Sand, Inc. - Common Stock",,4.16,2268729.91,0.20,True,0.14,False,0.13,False,2026-07-29
+SONO,B,"Sonos, Inc. - Common Stock",,17.52,33909870.09,0.23,True,0.21,True,0.07,False,2026-07-29
+SPRC,B,SciSparc Ltd. - Ordinary Shares,,9.09,2611894.57,1.14,True,0.59,True,0.71,True,2026-07-29
+SPT,B,"Sprout Social, Inc - Class A Common Stock",,8.82,9270859.92,0.24,True,0.20,True,0.10,False,2026-07-29
+SRXH,B,SRX Global Inc. Common Stock,,1.45,24304594.93,0.39,True,0.19,False,0.12,False,2026-07-29
+SRZN,B,"Surrozen, Inc. - Common Stock",,19.20,4539771.09,0.21,True,0.09,False,0.07,False,2026-07-29
+SSTK,B,"Shutterstock, Inc. Common Stock",,5.70,10632713.87,0.35,True,0.01,False,0.06,False,2026-07-29
+STAK,B,STAK Inc. - Class A Ordinary Shares,,2.43,32981445.55,9.26,True,0.84,True,6.02,True,2026-07-29
+STFS,B,Star Fashion Culture Holdings Limited - Class A Ordinary Shares,,4.78,4292565.61,2.24,True,0.29,True,0.32,True,2026-07-29
+STKH,B,Steakholder Foods Ltd. - American Depositary Shares,,2.71,4975926.53,4.83,True,0.96,True,1.67,True,2026-07-29
+STXS,B,"Stereotaxis, Inc. Common Stock",,1.33,1813944.28,0.20,True,0.06,False,0.09,False,2026-07-29
+SUJA,B,"Suja Life, Inc. - Class A Common Stock",,10.13,2883454.64,0.20,True,0.03,False,0.05,False,2026-07-29
+SUNE,B,"SUNation Energy, Inc. - Common Stock",,2.16,14287266.47,0.32,True,0.17,False,0.08,False,2026-07-29
+SUPX,B,SuperX AI Technology Limited - Ordinary Shares,,5.81,1464243.80,0.32,True,0.09,False,0.12,False,2026-07-29
+SVCO,B,"Silvaco Group, Inc. - Common Stock",,6.91,5319552.78,0.23,True,0.13,False,0.08,False,2026-07-29
+SVRE,B,SaverOne 2014 Ltd. - American Depositary Shares,,3.70,2727031.47,0.22,True,0.00,False,0.04,False,2026-07-29
+TASK,B,"TaskUs, Inc. - Class A Common Stock",,6.49,4229123.49,0.23,True,0.21,True,0.07,False,2026-07-29
+TC,B,Token Cat Limited - American Depositary Shares,,2.20,13480277.58,1.01,True,0.17,False,0.22,True,2026-07-29
+TDIC,B,Dreamland Limited - Class A Ordinary Shares,,2.37,8760318.54,0.24,True,0.17,False,0.06,False,2026-07-29
+TE,B,T1 Energy Inc. Common Stock,,3.72,267200620.45,0.69,True,0.35,True,0.15,False,2026-07-29
+TGEN,B,Tecogen Inc. Common Stock,,3.00,1101995.49,0.25,True,0.12,False,0.07,False,2026-07-29
+TONX,B,TON Strategy Company - Common Stock,,2.98,1333759.08,0.20,True,0.14,False,0.09,False,2026-07-29
+TOYO,B,"TOYO Co., Ltd - Ordinary Shares",,4.70,6864609.81,0.20,True,0.05,False,0.04,False,2026-07-29
+TSSI,B,"TSS, Inc. - Common Stock",,8.66,8780073.43,0.21,True,0.17,False,0.07,False,2026-07-29
+TTEC,B,"TTEC Holdings, Inc. - Common Stock",,2.54,1310573.29,0.34,True,0.28,True,0.11,False,2026-07-29
+TTGT,B,"TechTarget, Inc. - Common Stock",,4.52,1602912.56,0.36,True,0.27,True,0.18,False,2026-07-29
+TTI,B,"Tetra Technologies, Inc. Common Stock",,7.31,17673995.16,0.33,True,0.14,False,0.07,False,2026-07-29
+TVRD,B,"Tvardi Therapeutics, Inc. - Common Stock",,2.14,16921736.21,0.37,True,0.16,False,0.12,False,2026-07-29
+TYGO,B,"Tigo Energy, Inc. - Common Stock",,1.54,3269781.18,0.21,True,0.13,False,0.05,False,2026-07-29
+TZOO,B,Travelzoo - Common Stock,,7.46,1478708.67,0.56,True,0.25,True,0.26,True,2026-07-29
+UAMY,B,United States Antimony Corporation Common Stock,,4.91,41157206.63,0.21,True,0.11,False,0.06,False,2026-07-29
+UBXG,B,U-BX Technology Ltd. - Class A Ordinary Shares,,5.03,19349566.16,1.96,True,0.20,True,0.27,True,2026-07-17
+ULCC,B,"Frontier Group Holdings, Inc. - Common Stock",,6.50,28601868.87,0.26,True,0.18,False,0.06,False,2026-07-29
+UMAC,B,"Unusual Machines, Inc. Common Stock",,17.26,84937084.07,0.27,True,0.20,True,0.13,False,2026-07-29
+UMC,B,United Microelectronics Corporation (NEW) Common Stock,,17.11,421916704.74,0.28,True,0.18,False,0.09,False,2026-07-29
+UPC,B,Universe Pharmaceuticals Inc - Class A Ordinary Shares,,3.26,26671070.49,0.33,True,0.14,False,0.11,False,2026-07-29
+UROY,B,Uranium Royalty Corp. - Common Stock,,3.03,8380293.02,0.27,True,0.02,False,0.09,False,2026-07-29
+USAR,B,"USA Rare Earth, Inc. - Common Stock",,13.07,223049575.98,0.22,True,0.14,False,0.07,False,2026-07-29
+USDE,B,StablecoinX Inc. - Class A Common Stock,,1.51,8972961.81,0.45,True,0.13,False,0.18,False,2026-07-29
+UWMC,B,UWM Holdings Corporation Class A Common Stock,,1.98,43540475.23,0.20,True,0.14,False,0.06,False,2026-07-29
+VATE,B,INNOVATE Corp. Common Stock,,7.74,1758418.26,0.23,True,0.08,False,0.09,False,2026-07-29
+VEEE,B,Twin Vee PowerCats Co. - Common Stock,,12.94,127412390.54,1.08,True,0.11,False,0.22,True,2026-07-29
+VELO,B,"Velo3D, Inc. - Common stock",,8.44,49050477.56,0.26,True,0.17,False,0.11,False,2026-07-29
+VENU,B,Venu Holding Corporation Common Stock,,2.09,2159567.24,0.26,True,0.14,False,0.09,False,2026-07-29
+VERX,B,"Vertex, Inc. - Class A Common Stock",,13.32,23741814.31,0.26,True,0.22,True,0.09,False,2026-07-29
+VFC,B,V.F. Corporation Common Stock,,15.08,117679913.68,0.24,True,0.09,False,0.17,False,2026-07-29
+VG,B,"Venture Global, Inc. Class A common stock",,13.05,192724641.43,0.28,True,0.14,False,0.10,False,2026-07-29
+VIVK,B,"Vivakor, Inc. - Common Stock",,2.40,32264750.32,1.70,True,0.13,False,0.37,True,2026-07-29
+VIVO,B,VivoPower PLC - Class A Ordinary Shares,,3.17,6105549.60,0.38,True,0.19,False,0.18,False,2026-07-29
+VLN,B,Valens Semiconductor Ltd. Ordinary Shares,,1.48,3133519.96,0.27,True,0.14,False,0.05,False,2026-07-29
+VNET,B,"VNET Group, Inc. - American Depositary Shares",,6.29,34113955.91,0.29,True,0.19,False,0.07,False,2026-07-29
+VRRM,B,Verra Mobility Corporation - Class A Common Stock,,5.10,26119557.81,0.55,True,0.31,True,0.22,True,2026-07-29
+VRXA,B,Veraxa Biotech AG - Ordinary Shares,,1.97,2447940.70,0.28,True,0.06,False,0.12,False,2026-07-29
+VTEX,B,VTEX Class A Common Shares,,4.50,5639718.60,0.20,True,0.16,False,0.08,False,2026-07-29
+VTIX,B,Virtuix Holdings Inc. - Class A Common Stock,,1.51,1971376.60,0.90,True,0.41,True,0.22,True,2026-07-29
+VWAV,B,"VisionWave Holdings, Inc. - Common Stock",,2.09,4214420.49,0.82,True,0.36,True,0.13,False,2026-07-29
+WATT,B,Energous Corporation - Common Stock,,13.05,5368184.48,0.25,True,0.14,False,0.07,False,2026-07-29
+WAVE,B,Eco Wave Power Global AB (publ) - American Depositary Shares,,7.10,1184762.66,0.21,True,0.11,False,0.04,False,2026-07-29
+WBUY,B,WEBUY GLOBAL LTD. - Class A Ordinary Shares,,1.04,6952905.12,0.97,True,0.07,False,0.24,True,2026-07-29
+WHLR,B,"Wheeler Real Estate Investment Trust, Inc. - Common Stock",,0.94,2207514.41,0.66,True,0.20,True,0.28,True,2026-07-29
+WLDS,B,Wearable Devices Ltd. - Ordinary Share,,2.97,8105270.18,3.08,True,0.33,True,0.58,True,2026-07-29
+WNW,B,Meiwu Technology Company Limited - Ordinary Shares,,2.49,2473334.67,0.20,True,0.00,False,0.06,False,2026-07-29
+WSHP,B,WeShop Holdings Limited - Class A Ordinary Shares,,4.85,3935232.59,0.23,True,0.05,False,0.15,False,2026-07-29
+WTI,B,"W&T Offshore, Inc. Common Stock",,3.53,14294003.79,0.27,True,0.08,False,0.11,False,2026-07-29
+WTTR,B,"Select Water Solutions, Inc. Class A common stock",,17.86,37453723.50,0.23,True,0.14,False,0.07,False,2026-07-29
+WULF,B,TeraWulf Inc. - Common Stock,,15.09,772806715.48,0.40,True,0.25,True,0.12,False,2026-07-29
+XE,B,"X-Energy, Inc. - Class A Common Stock",,15.27,91090171.00,0.20,True,0.04,False,0.09,False,2026-07-29
+XGN,B,Exagen Inc. - Common Stock,,4.35,1054935.52,0.25,True,0.12,False,0.06,False,2026-07-29
+YEXT,B,"Yext, Inc. Common Stock",,5.72,6507750.03,0.21,True,0.16,False,0.11,False,2026-07-29
+YHC,B,LQR House Inc. - Common Stock,,1.61,3195932.68,0.50,True,0.12,False,0.16,False,2026-07-29
+YRD,B,"Yiren Digital Ltd. American Depositary Shares, each representing two ordinary shares",,1.07,2998652.16,0.21,True,0.12,False,0.05,False,2026-07-29
+YSS,B,York Space Systems Inc. Common Stock,,15.02,31677248.76,0.31,True,0.15,False,0.16,False,2026-07-29
+YYGH,B,YY Group Holding Limited - Class A Ordinary Shares,,1.25,2993297.71,0.39,True,0.02,False,0.09,False,2026-07-29
+ZCMD,B,Zhongchao Inc. - Class A Ordinary Shares,,1.06,27078344.50,4.05,True,0.39,True,0.19,False,2026-07-29
+ZENA,B,"ZenaTech, Inc. - Common Stock",,1.24,2896306.15,0.27,True,0.17,False,0.07,False,2026-07-29
+ZIP,B,"ZipRecruiter, Inc. Class A Common Stock",,4.16,2745575.01,0.24,True,0.08,False,0.09,False,2026-07-29
+ZNB,B,Zeta Network Group - Class A Ordinary Shares,,2.40,1414930.25,0.77,True,0.10,False,0.20,True,2026-07-29
+ZSQR,B,Z Squared Inc. - Common Stock,,5.29,7974297.56,0.26,True,0.11,False,0.11,False,2026-07-29
+ZVRA,B,"Zevra Therapeutics, Inc.  - Common Stock",,9.78,19356622.13,0.38,True,0.22,True,0.24,True,2026-07-29
